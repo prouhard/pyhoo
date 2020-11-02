@@ -7,7 +7,7 @@ class MockResponse:
     def __init__(self, json: Any) -> None:
         self._json = json
 
-    async def json(self):
+    async def json(self) -> Any:
         return self._json
 
 
@@ -24,6 +24,6 @@ class MockSession:
         """Add a mock response to a specific URI and resource verb. Responses are queued."""
         self._responses[url][method].append(MockResponse(response))
 
-    async def request(self, method: str, url: str):
+    async def request(self, method: str, url: str) -> MockResponse:
         """Pop the first response stored for the specified URI and resource verb."""
         return self._responses[url][method].popleft()

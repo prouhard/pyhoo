@@ -1,60 +1,115 @@
 import enum
-from typing import Any, Dict, List
-
-import attr
+from typing import Any, Dict, Iterable, List, Sequence, TypedDict, TypeVar
 
 from pynance.models.iterables import Timestamp
 
+T = TypeVar('T')
+
+
+class ReportedValueDict(TypedDict):
+
+    raw: float
+    fmt: str
+
+
+class RowDict(TypedDict):
+
+    dataId: int
+    asOfDate: str
+    periodType: str
+    reportedValue: ReportedValueDict
+    currencyCode: str
+
+
+class FundamentalsMetaDict(TypedDict):
+
+    symbol: str
+    type: str
+
+
+class FundamentalsDataRowDict(FundamentalsMetaDict):
+
+    dataId: int
+    asOfDate: str
+    periodType: str
+    reportedValue: float
+    currencyCode: str
+
 
 class Frequency(enum.Enum):
+
     ANNUAL = 'annual'
     QUARTERLY = 'quarterly'
     MONTHLY = 'monthly'
 
 
-@attr.s(slots=True)
 class ReportedValue:
-    raw: float = attr.ib()
-    fmt: str = attr.ib()
+
+    raw: float
+    fmt: str
+
+    def __init__(self, raw: float, fmt: str) -> None:
+        self.raw = raw
+        self.fmt = fmt
 
 
-@attr.s(slots=True)
 class Row:
-    dataId: int = attr.ib()
-    asOfDate: str = attr.ib()
-    periodType: str = attr.ib()
-    reportedValue: ReportedValue = attr.ib(
-        converter=lambda reported_value: ReportedValue(**reported_value))
-    currencyCode: str = attr.ib(default='')
+
+    dataId: int
+    asOfDate: str
+    periodType: str
+    reportedValue: ReportedValue
+    currencyCode: str
+
+    def __init__(
+        self,
+        dataId: int,
+        asOfDate: str,
+        periodType: str,
+        reportedValue: ReportedValueDict,
+        currencyCode: str = '',
+    ) -> None:
+        self.dataId = dataId
+        self.asOfDate = asOfDate
+        self.periodType = periodType
+        self.reportedValue = ReportedValue(**reportedValue)
+        self.currencyCode = currencyCode
 
 
-@attr.s(slots=True)
 class FundamentalsMeta:
-    symbol: str = attr.ib(converter=lambda symbol: symbol[0])
-    type: str = attr.ib(converter=lambda type: type[0])
+
+    symbol: str
+    type: str
+
+    def __init__(self, symbol: Sequence[str], type: Sequence[str]) -> None:
+        self.symbol = self._get_first_element(symbol)
+        self.type = self._get_first_element(type)
+
+    @staticmethod
+    def _get_first_element(sequence: Sequence[T]) -> T:
+        return sequence[0]
 
 
 class FundamentalsData:
     def __init__(
         self,
-        meta: Dict[str, Any],
-        timestamp: List[int] = [],
-        **data: List[Dict[str, Any]]
+        meta: FundamentalsMetaDict,
+        timestamp: Iterable[int],
+        **data: Iterable[RowDict],
     ) -> None:
         self.meta = FundamentalsMeta(**meta)
         self.timestamp = Timestamp(timestamp)
         self._parse_data(data)
 
-    def _parse_data(self, data: List[Dict[str, Any]]) -> List[Row]:
+    def _parse_data(self, data: Dict[str, Iterable[RowDict]]) -> None:
         fundamentals_name = self.meta.type
         fundamentals_data = next(iter(data.values())) if data else []
-        setattr(self, fundamentals_name, [Row(**row)
-                                          for row in fundamentals_data])
+        setattr(self, fundamentals_name, [Row(**row) for row in fundamentals_data])
 
     def has_data(self) -> bool:
         return len(getattr(self, self.meta.type[0])) > 0
 
-    def to_records(self) -> Dict[str, Any]:
+    def to_records(self) -> List[Dict[str, Any]]:
         return [
             {
                 'type': self.meta.type,

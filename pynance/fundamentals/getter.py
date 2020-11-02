@@ -1,6 +1,6 @@
 import json
 from functools import reduce
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 import aiohttp
 
@@ -26,7 +26,7 @@ class GetTickerFundamentalsTask:
         self._end_timestamp = end_timestamp
         self._frequency = frequency
 
-    async def run(self, session: aiohttp.ClientSession) -> Dict[str, Any]:
+    async def run(self, session: aiohttp.ClientSession) -> List[FundamentalsData]:
         logging.info(f'Getting URL {self._url} ...')
         response = await session.request('GET', url=self._url)
         data = await response.json()
@@ -50,5 +50,5 @@ class GetTickerFundamentalsTask:
         )
 
     @staticmethod
-    def _parse_data(data: Dict[str, Any]) -> FundamentalsData:
+    def _parse_data(data: Dict[str, Any]) -> List[FundamentalsData]:
         return [FundamentalsData(**response) for response in data['timeseries']['result']]
