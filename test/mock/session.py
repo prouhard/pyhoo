@@ -3,7 +3,6 @@ from typing import Any, DefaultDict, Deque
 
 
 class MockResponse:
-
     def __init__(self, json: Any) -> None:
         self._json = json
 

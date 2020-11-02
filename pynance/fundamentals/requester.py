@@ -41,15 +41,17 @@ class TickerFundamentalsRequester:
                         ticker=ticker,
                         start_timestamp=self._start_timestamp,
                         end_timestamp=self._end_timestamp,
-                        frequency=self._frequency
-                    ).run(session=session)
+                        frequency=self._frequency,
+                    ).run(session=session),
                 )
-            batch_ticker_fundamentals_data = await asyncio.gather(*tasks, return_exceptions=True)
+            batch_ticker_fundamentals_data = await asyncio.gather(
+                *tasks, return_exceptions=True
+            )
             return pd.DataFrame(
                 [
                     record
                     for ticker_fundamentals_data in batch_ticker_fundamentals_data
                     for ticker_fundamental_data in ticker_fundamentals_data
                     for record in ticker_fundamental_data.to_records()
-                ]
+                ],
             )

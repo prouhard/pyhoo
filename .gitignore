@@ -7,3 +7,7 @@ server.log
 
 # Virtual environment
 .venv/
+
+# Cache
+.mypy_cache
+.pytest_cache

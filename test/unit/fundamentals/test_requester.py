@@ -7,14 +7,14 @@ from pynance.fundamentals.getter import GetTickerFundamentalsTask
 from pynance.fundamentals.requester import TickerFundamentalsRequester
 from pynance.models.fundamentals import Frequency, FundamentalsData
 
-with open('test/unit/responses/fundamentals.json', 'r') as file:
+with open("test/unit/responses/fundamentals.json", "r") as file:
     mock_fundamentals = json.load(file)
 
 
 @pytest.mark.asyncio
-@patch.object(GetTickerFundamentalsTask, 'run')
+@patch.object(GetTickerFundamentalsTask, "run")
 async def test_requester_request(mock_getter_run: AsyncMock) -> None:
-    tickers = ['NVDA']
+    tickers = ["NVDA"]
     start_timestamp = 1485820800
     end_timestamp = 1517356800
     frequency = Frequency.ANNUAL
@@ -22,7 +22,7 @@ async def test_requester_request(mock_getter_run: AsyncMock) -> None:
 
     mock_getter_run.return_value = [
         FundamentalsData(**response)
-        for response in mock_fundamentals['timeseries']['result']
+        for response in mock_fundamentals["timeseries"]["result"]
     ]
 
     requester = TickerFundamentalsRequester(
@@ -36,13 +36,13 @@ async def test_requester_request(mock_getter_run: AsyncMock) -> None:
     fundamentals = await requester.request()
 
     assert fundamentals.columns.tolist() == [
-        'type',
-        'symbol',
-        'dataId',
-        'asOfDate',
-        'periodType',
-        'reportedValue',
-        'currencyCode',
+        "type",
+        "symbol",
+        "dataId",
+        "asOfDate",
+        "periodType",
+        "reportedValue",
+        "currencyCode",
     ]
 
     assert len(fundamentals) == 4

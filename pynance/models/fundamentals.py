@@ -1,8 +1,7 @@
 import enum
-from typing import Dict, Iterable, List, Sequence
+from typing import Dict, Iterable, List, Sequence, TypeVar
 
 from pynance.models.iterables import Timestamp
-from pynance.types import T
 from pynance.types.fundamentals import (
     FundamentalsDataRowDict,
     FundamentalsMetaDict,
@@ -10,12 +9,14 @@ from pynance.types.fundamentals import (
     ReportedValueDict,
 )
 
+T = TypeVar("T")
+
 
 class Frequency(enum.Enum):
 
-    ANNUAL = 'annual'
-    QUARTERLY = 'quarterly'
-    MONTHLY = 'monthly'
+    ANNUAL = "annual"
+    QUARTERLY = "quarterly"
+    MONTHLY = "monthly"
 
 
 class ReportedValue:
@@ -42,7 +43,7 @@ class FundamentalsRow:
         asOfDate: str,
         periodType: str,
         reportedValue: ReportedValueDict,
-        currencyCode: str = '',
+        currencyCode: str = "",
     ) -> None:
         self.dataId = dataId
         self.asOfDate = asOfDate
@@ -79,25 +80,28 @@ class FundamentalsData:
     def _parse_data(self, data: Dict[str, Iterable[FundamentalsRowDict]]) -> None:
         fundamentals_name = self.meta.type
         fundamentals_data = next(iter(data.values())) if data else []
-        setattr(self, fundamentals_name, [FundamentalsRow(**row) for row in fundamentals_data])
+        setattr(
+            self,
+            fundamentals_name,
+            [FundamentalsRow(**row) for row in fundamentals_data],
+        )
 
     def to_records(self) -> List[FundamentalsDataRowDict]:
         return [
             {
-                'type': self.meta.type,
-                'symbol': self.meta.symbol,
-                'dataId': row.dataId,
-                'asOfDate': row.asOfDate,
-                'periodType': row.periodType,
-                'reportedValue': row.reportedValue.raw,
-                'currencyCode': row.currencyCode,
+                "type": self.meta.type,
+                "symbol": self.meta.symbol,
+                "dataId": row.dataId,
+                "asOfDate": row.asOfDate,
+                "periodType": row.periodType,
+                "reportedValue": row.reportedValue.raw,
+                "currencyCode": row.currencyCode,
             }
             for row in getattr(self, self.meta.type)
         ]
 
     def __repr__(self) -> str:
-        formatted_attrs = ', '.join(
-            attr_name + '=' + attr_value.__repr__()
-            for attr_name, attr_value in self.__dict__.items()
+        formatted_attrs = ", ".join(
+            attr_name + "=" + attr_value.__repr__() for attr_name, attr_value in self.__dict__.items()
         )
-        return f'{self.__class__.__name__}({formatted_attrs})'
+        return f"{self.__class__.__name__}({formatted_attrs})"

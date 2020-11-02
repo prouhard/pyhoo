@@ -12,17 +12,17 @@ from __future__ import annotations
 import datetime
 from typing import Generic, List, TypeVar
 
-import attr
-
-T = TypeVar('T')
+T = TypeVar("T")
 
 
-@attr.s
 class CustomIterable(Generic[T]):
 
-    _values: List[T] = attr.ib(factory=list)
+    _values: List[T]
 
-    def __iter__(self) -> 'CustomIterator[T]':
+    def __init__(self, values: List[T]) -> None:
+        self._values = values
+
+    def __iter__(self) -> "CustomIterator[T]":
         return CustomIterator(self)
 
     def __getitem__(self, index: int) -> T:
@@ -35,15 +35,18 @@ class CustomIterable(Generic[T]):
         return self.__class__(self._values + custom_iterable._values)
 
 
-@attr.s
 class CustomIterator(Generic[T]):
 
-    _custom_iterable: CustomIterable[T] = attr.ib()
-    _index: int = 0
+    _iterable: CustomIterable[T]
+    _index: int
+
+    def __init__(self, iterable: CustomIterable[T]) -> None:
+        self._iterable = iterable
+        self._index = 0
 
     def __next__(self) -> T:
-        if self._index < len(self._custom_iterable):
-            result = self._custom_iterable[self._index]
+        if self._index < len(self._iterable):
+            result = self._iterable[self._index]
             self._index += 1
             return result
         raise StopIteration
@@ -53,8 +56,7 @@ class CustomIterator(Generic[T]):
 
 
 class Timestamp(CustomIterable[int]):
-
-    def to_str(self, format: str = '%Y-%m-%dT%H:%M:%S') -> List[str]:
+    def to_str(self, format: str = "%Y-%m-%dT%H:%M:%S") -> List[str]:
         """Convert each timestamp to a datetime object and then format it as specified."""
         return list(map(lambda date: date.strftime(format), self.to_datetime()))
 
