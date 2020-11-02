@@ -1,6 +1,7 @@
 import enum
 from typing import Dict, Iterable, List, Sequence, TypeVar
 
+from pynance.models.abc import BaseModel
 from pynance.models.iterables import Timestamp
 from pynance.types.fundamentals import (
     FundamentalsDataRowDict,
@@ -19,7 +20,7 @@ class Frequency(enum.Enum):
     MONTHLY = "monthly"
 
 
-class ReportedValue:
+class ReportedValue(BaseModel):
 
     raw: float
     fmt: str
@@ -29,7 +30,7 @@ class ReportedValue:
         self.fmt = fmt
 
 
-class FundamentalsRow:
+class FundamentalsRow(BaseModel):
 
     dataId: int
     asOfDate: str
@@ -52,7 +53,7 @@ class FundamentalsRow:
         self.currencyCode = currencyCode
 
 
-class FundamentalsMeta:
+class FundamentalsMeta(BaseModel):
 
     symbol: str
     type: str
@@ -66,7 +67,7 @@ class FundamentalsMeta:
         return sequence[0]
 
 
-class FundamentalsData:
+class FundamentalsData(BaseModel):
     def __init__(
         self,
         meta: FundamentalsMetaDict,

@@ -4,7 +4,7 @@ from unittest.mock import AsyncMock, patch
 import pytest
 
 from pynance.fundamentals.getter import GetTickerFundamentalsTask
-from pynance.fundamentals.requester import TickerFundamentalsRequester
+from pynance.fundamentals.requester import FundamentalsRequester
 from pynance.models.fundamentals import Frequency, FundamentalsData
 
 with open("test/unit/responses/fundamentals.json", "r") as file:
@@ -21,11 +21,10 @@ async def test_requester_request(mock_getter_run: AsyncMock) -> None:
     max_concurrent_calls = 1
 
     mock_getter_run.return_value = [
-        FundamentalsData(**response)
-        for response in mock_fundamentals["timeseries"]["result"]
+        FundamentalsData(**response) for response in mock_fundamentals["timeseries"]["result"]
     ]
 
-    requester = TickerFundamentalsRequester(
+    requester = FundamentalsRequester(
         tickers=tickers,
         start_timestamp=start_timestamp,
         end_timestamp=end_timestamp,

@@ -12,10 +12,12 @@ from __future__ import annotations
 import datetime
 from typing import Generic, List, TypeVar
 
+from pynance.models.abc import BaseModel
+
 T = TypeVar("T")
 
 
-class CustomIterable(Generic[T]):
+class CustomIterable(BaseModel, Generic[T]):
 
     _values: List[T]
 
