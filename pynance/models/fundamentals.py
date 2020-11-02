@@ -1,8 +1,9 @@
-import attr
 import enum
-
 from typing import Any, Dict, List
-from models.iterables import Timestamp
+
+import attr
+
+from pynance.models.iterables import Timestamp
 
 
 class Frequency(enum.Enum):
@@ -22,7 +23,8 @@ class Row:
     dataId: int = attr.ib()
     asOfDate: str = attr.ib()
     periodType: str = attr.ib()
-    reportedValue: ReportedValue = attr.ib(converter=lambda reported_value: ReportedValue(**reported_value))
+    reportedValue: ReportedValue = attr.ib(
+        converter=lambda reported_value: ReportedValue(**reported_value))
     currencyCode: str = attr.ib(default='')
 
 
@@ -46,7 +48,8 @@ class FundamentalsData:
     def _parse_data(self, data: List[Dict[str, Any]]) -> List[Row]:
         fundamentals_name = self.meta.type
         fundamentals_data = next(iter(data.values())) if data else []
-        setattr(self, fundamentals_name, [Row(**row) for row in fundamentals_data])
+        setattr(self, fundamentals_name, [Row(**row)
+                                          for row in fundamentals_data])
 
     def has_data(self) -> bool:
         return len(getattr(self, self.meta.type[0])) > 0

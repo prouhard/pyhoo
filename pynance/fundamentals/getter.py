@@ -4,8 +4,8 @@ from typing import Any, Dict
 
 import aiohttp
 
-from config import FUNDAMENTALS_CONFIG_FILE, logging
-from models.fundamentals import Frequency, FundamentalsData
+from pynance.config import FUNDAMENTALS_CONFIG_FILE, logging
+from pynance.models.fundamentals import Frequency, FundamentalsData
 
 with open(FUNDAMENTALS_CONFIG_FILE, 'r') as config_file:
     FUNDAMENTALS_CONFIG = json.load(config_file)

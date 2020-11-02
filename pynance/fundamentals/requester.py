@@ -4,8 +4,8 @@ from typing import Iterable
 import aiohttp
 import pandas as pd
 
-from fundamentals.getter import GetTickerFundamentalsTask
-from models.fundamentals import Frequency
+from pynance.fundamentals.getter import GetTickerFundamentalsTask
+from pynance.models.fundamentals import Frequency
 
 
 class TickerFundamentalsRequester:
