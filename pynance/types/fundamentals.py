@@ -7,7 +7,7 @@ class ReportedValueDict(TypedDict):
     fmt: str
 
 
-class RowDict(TypedDict):
+class FundamentalsRowDict(TypedDict):
 
     dataId: int
     asOfDate: str

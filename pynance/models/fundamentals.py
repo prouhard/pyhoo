@@ -6,8 +6,8 @@ from pynance.types import T
 from pynance.types.fundamentals import (
     FundamentalsDataRowDict,
     FundamentalsMetaDict,
+    FundamentalsRowDict,
     ReportedValueDict,
-    RowDict,
 )
 
 
@@ -28,7 +28,7 @@ class ReportedValue:
         self.fmt = fmt
 
 
-class Row:
+class FundamentalsRow:
 
     dataId: int
     asOfDate: str
@@ -70,16 +70,16 @@ class FundamentalsData:
         self,
         meta: FundamentalsMetaDict,
         timestamp: Iterable[int],
-        **data: Iterable[RowDict],
+        **data: Iterable[FundamentalsRowDict],
     ) -> None:
         self.meta = FundamentalsMeta(**meta)
         self.timestamp = Timestamp(timestamp)
         self._parse_data(data)
 
-    def _parse_data(self, data: Dict[str, Iterable[RowDict]]) -> None:
+    def _parse_data(self, data: Dict[str, Iterable[FundamentalsRowDict]]) -> None:
         fundamentals_name = self.meta.type
         fundamentals_data = next(iter(data.values())) if data else []
-        setattr(self, fundamentals_name, [Row(**row) for row in fundamentals_data])
+        setattr(self, fundamentals_name, [FundamentalsRow(**row) for row in fundamentals_data])
 
     def to_records(self) -> List[FundamentalsDataRowDict]:
         return [

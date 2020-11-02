@@ -15,7 +15,7 @@ from test.mock.session import MockSession
 
 @pytest.mark.asyncio
 @patch.object(GetTickerFundamentalsTask, '_types', new_callable=PropertyMock)
-async def test_hello(mock_types: PropertyMock) -> None:
+async def test_getter_run(mock_types: PropertyMock) -> None:
     ticker = 'NVDA'
     start_timestamp = 1485820800
     end_timestamp = 1517356800
