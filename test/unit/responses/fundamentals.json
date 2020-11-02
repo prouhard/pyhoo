@@ -1,0 +1,79 @@
+{
+  "timeseries": {
+    "result": [
+      {
+        "meta": {
+          "symbol": [
+            "NVDA"
+          ],
+          "type": [
+            "annualWorkInProcess"
+          ]
+        },
+        "timestamp": [
+          1485820800,
+          1517356800
+        ],
+        "annualWorkInProcess": [
+          {
+            "dataId": 23378,
+            "asOfDate": "2017-01-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 176000000,
+              "fmt": "176.00M"
+            }
+          },
+          {
+            "dataId": 23378,
+            "asOfDate": "2018-01-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 192000000,
+              "fmt": "192.00M"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": [
+            "NVDA"
+          ],
+          "type": [
+            "annualConstructionInProgress"
+          ]
+        },
+        "timestamp": [
+          1485820800,
+          1517356800
+        ],
+        "annualConstructionInProgress": [
+          {
+            "dataId": 23282,
+            "asOfDate": "2017-01-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 29000000,
+              "fmt": "29.00M"
+            }
+          },
+          {
+            "dataId": 23282,
+            "asOfDate": "2018-01-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 31000000,
+              "fmt": "31.00M"
+            }
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+}

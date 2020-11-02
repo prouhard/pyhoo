@@ -1,0 +1,9 @@
+# Logging
+server.log
+
+# Temporary notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Virtual environment
+.venv/

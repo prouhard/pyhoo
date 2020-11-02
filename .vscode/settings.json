@@ -1,0 +1,28 @@
+{
+    "python.analysis.extraPaths": [
+        // User-defined modules
+        "src",
+        // Testing modules
+        "test",
+        // Site packages
+        ".venv/lib/python3.8/site-packages"
+    ],
+    "python.terminal.activateEnvironment": false,
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120"
+    ],
+    "python.linting.lintOnSave": true,
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "autopep8",
+    "python.pythonPath": "./.venv/bin/python",
+    "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
+    "python.sortImports.args": [
+        "--settings-path=${workspaceFolder}/.isort.cfg"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
+}
