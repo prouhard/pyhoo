@@ -1,39 +1,14 @@
 import enum
-from typing import Any, Dict, Iterable, List, Sequence, TypedDict, TypeVar
+from typing import Dict, Iterable, List, Sequence
 
 from pynance.models.iterables import Timestamp
-
-T = TypeVar('T')
-
-
-class ReportedValueDict(TypedDict):
-
-    raw: float
-    fmt: str
-
-
-class RowDict(TypedDict):
-
-    dataId: int
-    asOfDate: str
-    periodType: str
-    reportedValue: ReportedValueDict
-    currencyCode: str
-
-
-class FundamentalsMetaDict(TypedDict):
-
-    symbol: str
-    type: str
-
-
-class FundamentalsDataRowDict(FundamentalsMetaDict):
-
-    dataId: int
-    asOfDate: str
-    periodType: str
-    reportedValue: float
-    currencyCode: str
+from pynance.types import T
+from pynance.types.fundamentals import (
+    FundamentalsDataRowDict,
+    FundamentalsMetaDict,
+    ReportedValueDict,
+    RowDict,
+)
 
 
 class Frequency(enum.Enum):
@@ -106,10 +81,7 @@ class FundamentalsData:
         fundamentals_data = next(iter(data.values())) if data else []
         setattr(self, fundamentals_name, [Row(**row) for row in fundamentals_data])
 
-    def has_data(self) -> bool:
-        return len(getattr(self, self.meta.type[0])) > 0
-
-    def to_records(self) -> List[Dict[str, Any]]:
+    def to_records(self) -> List[FundamentalsDataRowDict]:
         return [
             {
                 'type': self.meta.type,
