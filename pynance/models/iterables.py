@@ -65,3 +65,7 @@ class Timestamp(CustomIterable[int]):
     def to_datetime(self) -> List[datetime.datetime]:
         """Convert each timestamp to a datetime object."""
         return list(map(datetime.datetime.fromtimestamp, self))
+
+
+class Strikes(CustomIterable[float]):
+    pass
