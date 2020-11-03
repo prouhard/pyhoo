@@ -83,7 +83,7 @@ class Indicators(BaseModel):
     quote: Quote
     adjclose: AdjClose
 
-    def __init__(self, indicators: IndicatorsDict) -> Indicators:
+    def __init__(self, indicators: IndicatorsDict) -> None:
         self.quote = Quote(**indicators["quote"][0])
         self.adjclose = AdjClose(**indicators["adjclose"][0])
 

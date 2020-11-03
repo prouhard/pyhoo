@@ -23,7 +23,7 @@ async def test_getter_run(mock_types: PropertyMock) -> None:
     mock_types.return_value = types
     session = MockSession()
     url = (
-        f"{GetTickerFundamentalsTask._BASE_URL}/{ticker}?"
+        f"{GetTickerFundamentalsTask._BASE_URL}/ws/fundamentals-timeseries/v1/finance/timeseries/{ticker}?"
         f"period1={start_timestamp}&"
         f"period2={end_timestamp}&"
         f"type={types}"
