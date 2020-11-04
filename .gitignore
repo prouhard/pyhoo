@@ -1,5 +1,5 @@
 # Logging
-server.log
+output.log
 
 # Temporary notebooks
 .ipynb_checkpoints/
@@ -11,3 +11,4 @@ server.log
 # Cache
 .mypy_cache
 .pytest_cache
+__pycache__

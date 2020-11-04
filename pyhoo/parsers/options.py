@@ -1,10 +1,10 @@
 from dataclasses import asdict
 from typing import List, Sequence, cast
 
-from pynance.models.iterables import Strikes, Timestamp
-from pynance.models.options import OptionQuote, Options
-from pynance.parsers.abc import BaseParser
-from pynance.types.options import (
+from pyhoo.models.iterables import Strikes, Timestamp
+from pyhoo.models.options import OptionQuote, Options
+from pyhoo.parsers.abc import BaseParser
+from pyhoo.types.options import (
     OptionQuoteDict,
     OptionsDataRecord,
     OptionsDict,

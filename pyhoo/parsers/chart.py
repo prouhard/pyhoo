@@ -1,9 +1,9 @@
 from typing import List, cast
 
-from pynance.models.iterables import Timestamp
-from pynance.models.chart import Indicators, ChartMeta
-from pynance.parsers.abc import BaseParser
-from pynance.types.chart import IndicatorsDict, ChartDataRecord, ChartMetaDict
+from pyhoo.models.iterables import Timestamp
+from pyhoo.models.chart import Indicators, ChartMeta
+from pyhoo.parsers.abc import BaseParser
+from pyhoo.types.chart import IndicatorsDict, ChartDataRecord, ChartMetaDict
 
 
 class ChartParser(BaseParser):

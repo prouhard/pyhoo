@@ -3,9 +3,9 @@ from unittest.mock import AsyncMock, patch
 
 import pytest
 
-from pynance.getter import GetTickerDataTask
-from pynance.models.chart import Interval
-from pynance.requester import Requester
+from pyhoo.getter import GetTickerDataTask
+from pyhoo.models.chart import Interval
+from pyhoo.requester import Requester
 
 with open("test/unit/responses/chart.json", "r") as file:
     mock_chart = json.load(file)

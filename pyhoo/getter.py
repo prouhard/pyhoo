@@ -2,8 +2,8 @@ from typing import Any, Dict, cast
 
 import aiohttp
 
-from pynance.config import logging
-from pynance.types import ApiResponse
+from pyhoo.config import logging
+from pyhoo.types import ApiResponse
 
 
 class GetTickerDataTask:

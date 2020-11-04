@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Iterable
 
-from pynance.models.abc import BaseModel
-from pynance.types.options import OptionDict
+from pyhoo.models.abc import BaseModel
+from pyhoo.types.options import OptionDict
 
 
 @dataclass

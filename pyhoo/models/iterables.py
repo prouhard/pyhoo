@@ -12,7 +12,7 @@ from __future__ import annotations
 import datetime
 from typing import Generic, List, TypeVar
 
-from pynance.models.abc import BaseModel
+from pyhoo.models.abc import BaseModel
 
 T = TypeVar("T")
 

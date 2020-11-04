@@ -12,21 +12,21 @@ from typing import (
     cast,
 )
 
-from pynance.errors import (
+from pyhoo.errors import (
     InvalidParameterPrefixError,
     InvalidParameterTypeError,
     InvalidParameterValueError,
     UnknownParameterError,
 )
-from pynance.parsers import FundamentalsParser, OptionsParser, ChartParser
-from pynance.parsers.abc import BaseParser
+from pyhoo.parsers import FundamentalsParser, OptionsParser, ChartParser
+from pyhoo.parsers.abc import BaseParser
 
 T = TypeVar("T")
 V = TypeVar("V")
 
 logging.basicConfig(filename="output.log", level=logging.INFO)
 
-FUNDAMENTALS_TYPE_OPTIONS_PATH = "pynance/data/fundamentals_type_options.txt"
+FUNDAMENTALS_TYPE_OPTIONS_PATH = "pyhoo/data/fundamentals_type_options.txt"
 
 
 class ParamConfig:

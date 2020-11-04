@@ -4,8 +4,8 @@ from typing import cast
 import pytest
 from aiohttp import ClientSession
 
-from pynance.getter import GetTickerDataTask
-from pynance.models.chart import Interval
+from pyhoo.getter import GetTickerDataTask
+from pyhoo.models.chart import Interval
 
 with open("test/unit/responses/chart.json", "r") as file:
     mock_chart = json.load(file)

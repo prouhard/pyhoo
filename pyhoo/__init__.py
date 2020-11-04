@@ -3,10 +3,10 @@ from typing import Any, Dict, Iterable, Type
 
 import pandas as pd
 
-from pynance.config import config
-from pynance.parsers.abc import BaseParser
-from pynance.requester import Requester
-from pynance.types import ApiResponse, Endpoint
+from pyhoo.config import config
+from pyhoo.parsers.abc import BaseParser
+from pyhoo.requester import Requester
+from pyhoo.types import ApiResponse, Endpoint
 
 
 def get(

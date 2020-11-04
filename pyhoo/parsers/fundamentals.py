@@ -1,9 +1,9 @@
 from typing import Dict, Iterable, List
 
-from pynance.models.fundamentals import FundamentalsMeta, FundamentalsRow
-from pynance.models.iterables import Timestamp
-from pynance.parsers.abc import BaseParser
-from pynance.types.fundamentals import (
+from pyhoo.models.fundamentals import FundamentalsMeta, FundamentalsRow
+from pyhoo.models.iterables import Timestamp
+from pyhoo.parsers.abc import BaseParser
+from pyhoo.types.fundamentals import (
     FundamentalsDataRowDict,
     FundamentalsMetaDict,
     FundamentalsRowDict,

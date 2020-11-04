@@ -2,8 +2,8 @@ import enum
 from dataclasses import dataclass
 from typing import Sequence, TypeVar
 
-from pynance.models.abc import BaseModel
-from pynance.types.fundamentals import ReportedValueDict
+from pyhoo.models.abc import BaseModel
+from pyhoo.types.fundamentals import ReportedValueDict
 
 T = TypeVar("T")
 

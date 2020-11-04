@@ -1,7 +1,7 @@
 {
     "python.analysis.extraPaths": [
         // User-defined modules
-        "pynance",
+        "pyhoo",
         // Testing modules
         "test",
         // Site packages

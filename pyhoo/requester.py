@@ -3,8 +3,8 @@ from typing import Any, Dict, Iterable, List, cast
 
 import aiohttp
 
-from pynance.getter import GetTickerDataTask
-from pynance.types import ApiResponse
+from pyhoo.getter import GetTickerDataTask
+from pyhoo.types import ApiResponse
 
 
 class Requester:

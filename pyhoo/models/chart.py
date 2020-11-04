@@ -4,8 +4,8 @@ import enum
 from dataclasses import dataclass, field
 from typing import List, Optional
 
-from pynance.models.abc import BaseModel
-from pynance.types.chart import (
+from pyhoo.models.abc import BaseModel
+from pyhoo.types.chart import (
     CurrentTradingPeriodDict,
     IndicatorsDict,
     ChartMetaDictBase,

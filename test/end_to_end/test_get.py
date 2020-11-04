@@ -4,7 +4,7 @@ from unittest.mock import MagicMock, patch
 
 from aiohttp import ClientSession
 
-from pynance import get
+from pyhoo import get
 from test.mock.session import MockSession
 
 with open("test/unit/responses/chart.json", "r") as file:
@@ -20,7 +20,7 @@ with open("test/unit/responses/options.json", "r") as file:
 BASE_URL = "https://query2.finance.yahoo.com"
 
 
-@patch("pynance.requester.aiohttp.ClientSession")
+@patch("pyhoo.requester.aiohttp.ClientSession")
 def test_get_chart(client_session_mock: MagicMock) -> None:
 
     url = "https://query2.finance.yahoo.com/v8/finance/chart/NVDA?period1=1601503200&period2=1602108000&interval=1d"
@@ -41,7 +41,7 @@ def test_get_chart(client_session_mock: MagicMock) -> None:
     assert len(chart_data) == 5
 
 
-@patch("pynance.requester.aiohttp.ClientSession")
+@patch("pyhoo.requester.aiohttp.ClientSession")
 def test_get_fundamentals(client_session_mock: MagicMock) -> None:
 
     url = (
@@ -65,7 +65,7 @@ def test_get_fundamentals(client_session_mock: MagicMock) -> None:
     assert len(fundamentals_data) == 4
 
 
-@patch("pynance.requester.aiohttp.ClientSession")
+@patch("pyhoo.requester.aiohttp.ClientSession")
 def test_get_options(client_session_mock: MagicMock) -> None:
 
     url = "https://query2.finance.yahoo.com/v7/finance/options/NVDA"
