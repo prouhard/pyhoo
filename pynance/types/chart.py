@@ -36,7 +36,8 @@ class CurrentTradingPeriodDict(TypedDict):
     post: TradingPeriodDict
 
 
-class StockMetaDict(TypedDict):
+class ChartMetaDictBase(TypedDict):
+
     currency: str
     symbol: str
     exchangeName: str
@@ -49,13 +50,17 @@ class StockMetaDict(TypedDict):
     regularMarketPrice: float
     chartPreviousClose: float
     priceHint: int
-    currentTradingPeriod: CurrentTradingPeriodDict
     dataGranularity: str
     range: str
+
+
+class ChartMetaDict(ChartMetaDictBase):
+
+    currentTradingPeriod: CurrentTradingPeriodDict
     validRanges: List[str]
 
 
-class StockDataRecord(TypedDict):
+class ChartDataRecord(TypedDict):
     timestamp: int
     high: float
     low: float

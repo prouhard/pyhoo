@@ -1,9 +1,8 @@
-from dataclasses import asdict, dataclass, field
-from typing import Iterable, List, Sequence
+from dataclasses import dataclass, field
+from typing import Iterable
 
 from pynance.models.abc import BaseModel
-from pynance.models.iterables import Strikes, Timestamp
-from pynance.types.options import OptionDict, OptionQuoteDict, OptionsDataRecord
+from pynance.types.options import OptionDict
 
 
 @dataclass
@@ -28,6 +27,7 @@ class Option:
 
 @dataclass
 class OptionQuote:
+
     language: str
     region: str
     quoteType: str
@@ -118,40 +118,3 @@ class Options(BaseModel):
         self.hasMiniOptions = hasMiniOptions
         self.calls = [Option(**call) for call in calls]
         self.puts = [Option(**put) for put in puts]
-
-
-class OptionsData(BaseModel):
-
-    underlyingSymbol: str
-    expirationDates: Timestamp
-    strikes: Strikes
-    hasMiniOptions: bool
-    quote: OptionQuote
-    options: Options
-
-    def __init__(
-        self,
-        underlyingSymbol: str,
-        expirationDates: Iterable[int],
-        strikes: Iterable[float],
-        hasMiniOptions: bool,
-        quote: OptionQuoteDict,
-        options: Sequence[OptionDict],
-    ) -> None:
-        self.underlyingSymbol = underlyingSymbol
-        self.expirationDates = Timestamp(expirationDates)
-        self.strikes = Strikes(strikes)
-        self.hasMiniOptions = hasMiniOptions
-        self.quote = OptionQuote(**quote)
-        self.options = Options(**options[0])
-
-    def to_records(self) -> List[OptionsDataRecord]:
-        return [
-            {
-                "underlyingSymbol": self.underlyingSymbol,
-                "type": type,
-                **asdict(option),
-            }
-            for option, type in [(call, "CALL") for call in self.options.calls]
-            + [(put, "PUT") for put in self.options.puts]
-        ]

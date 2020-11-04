@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections import defaultdict, deque
 from typing import Any, DefaultDict, Deque
 
@@ -26,3 +28,9 @@ class MockSession:
     async def request(self, method: str, url: str) -> MockResponse:
         """Pop the first response stored for the specified URI and resource verb."""
         return self._responses[url][method].popleft()
+
+    async def __aexit__(self, *args: Any, **kwargs: Any) -> None:
+        pass
+
+    async def __aenter__(self) -> MockSession:
+        return self

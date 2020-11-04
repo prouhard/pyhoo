@@ -1,4 +1,4 @@
-from typing import TypedDict
+from typing import Iterable, TypedDict
 
 
 class OptionDict(TypedDict):
@@ -99,6 +99,14 @@ class OptionQuoteDict(OptionQuoteDictBase, total=False):
     preMarketChangePercent: float
     preMarketTime: float
     preMarketPrice: float
+
+
+class OptionsDict(TypedDict):
+
+    expirationDate: int
+    hasMiniOptions: bool
+    calls: Iterable[OptionDict]
+    puts: Iterable[OptionDict]
 
 
 class OptionsDataRecord(OptionDict):
