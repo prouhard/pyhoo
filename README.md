@@ -1,5 +1,8 @@
 # Pyhoo
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+
 _Yet another unofficial Yahoo Finance API library but with concurrent requests._
 
 Pyhoo is **simple**:
@@ -36,3 +39,28 @@ Currently, it supports three endpoints:
 1. `chart`, for [OHLC](https://en.wikipedia.org/wiki/Open-high-low-close_chart) data, basically stock prices
 1. `fundamentals`, for financial data about the firm, see the [list of available reports](pyhoo/data/fundamentals_type_options.txt)
 1. `options`, for detailed information on each call and put at each strike on specific tickers
+
+## Troubleshooting
+
+If running from a Jupyter Notebook, you may encounter the following error:
+
+```python
+RuntimeError: asyncio.run() cannot be called from a running event loop
+```
+
+This is because Jupyter Notebooks are running themselves in an event loop, and it is a known issue with `asyncio.run`.
+
+There is a workaround, a bit hacky but gets the job done, using [nest_asyncio](https://github.com/erdewit/nest_asyncio).
+
+```bash
+pip install nest_asyncio
+```
+
+Then in the Notebook, before calling `pyhoo.get`:
+
+```python
+import nest_asyncio
+nest_asyncio.apply()
+```
+
+And you should be ok !
