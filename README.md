@@ -17,7 +17,7 @@ end = '2020-11-02'
 
 stock_prices = pyhoo.get('chart', tickers, start=start, end=end, granularity="1d")
 financial_reports = pyhoo.get('fundamentals', tickers, start=start, end=end)
-options = pyhoo.get('options', tickers, start=start, end=end)
+options = pyhoo.get('options', tickers, strikeMax=400)
 ```
 
 The result of `pyhoo.get` is a formatted `pandas.DataFrame` (here for stock prices):

@@ -2,7 +2,7 @@ import enum
 from dataclasses import dataclass
 from typing import Sequence, TypeVar
 
-from pyhoo.models.abc import BaseModel
+from pyhoo.models.abc import BaseModel, OptionalFieldsModel
 from pyhoo.types.fundamentals import ReportedValueDict
 
 T = TypeVar("T")
@@ -15,8 +15,8 @@ class Frequency(enum.Enum):
     MONTHLY = "monthly"
 
 
-@dataclass
-class ReportedValue:
+@dataclass(frozen=True)
+class ReportedValue(OptionalFieldsModel):
 
     raw: float
     fmt: str

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import Iterable
+from dataclasses import dataclass
+from typing import Iterable, Optional
 
-from pyhoo.models.abc import BaseModel
+from pyhoo.models.abc import BaseModel, OptionalFieldsModel
 from pyhoo.types.options import OptionDict
 
 
-@dataclass
-class Option:
+@dataclass(frozen=True)
+class Option(OptionalFieldsModel):
 
     contractSymbol: str
     strike: float
@@ -20,13 +20,13 @@ class Option:
     lastTradeDate: int
     impliedVolatility: float
     inTheMoney: bool
-    volume: int = field(default=0)
-    bid: float = field(default=0.0)
-    openInterest: int = field(default=0)
+    volume: int
+    bid: float
+    openInterest: int
 
 
-@dataclass
-class OptionQuote:
+@dataclass(frozen=True)
+class OptionQuote(OptionalFieldsModel):
 
     language: str
     region: str
@@ -63,7 +63,6 @@ class OptionQuote:
     fiftyTwoWeekHighChangePercent: float
     fiftyTwoWeekLow: float
     fiftyTwoWeekHigh: float
-    dividendDate: int
     earningsTimestamp: int
     earningsTimestampStart: int
     earningsTimestampEnd: int
@@ -98,23 +97,28 @@ class OptionQuote:
     bid: float
     displayName: str
     symbol: str
-    preMarketChange: float = field(default=0.0)
-    preMarketChangePercent: float = field(default=0.0)
-    preMarketTime: float = field(default=0.0)
-    preMarketPrice: float = field(default=0.0)
+    preMarketChange: float
+    preMarketChangePercent: float
+    preMarketTime: float
+    preMarketPrice: float
+    dividendDate: int
 
 
 class Options(BaseModel):
 
-    expirationDate: int
-    hasMiniOptions: bool
+    expirationDate: Optional[int]
+    hasMiniOptions: Optional[bool]
     calls: Iterable[Option]
     puts: Iterable[Option]
 
     def __init__(
-        self, expirationDate: int, hasMiniOptions: bool, calls: Iterable[OptionDict], puts: Iterable[OptionDict]
+        self,
+        expirationDate: Optional[int] = None,
+        hasMiniOptions: Optional[bool] = None,
+        calls: Optional[Iterable[OptionDict]] = None,
+        puts: Optional[Iterable[OptionDict]] = None,
     ) -> None:
         self.expirationDate = expirationDate
         self.hasMiniOptions = hasMiniOptions
-        self.calls = [Option(**call) for call in calls]
-        self.puts = [Option(**put) for put in puts]
+        self.calls = [Option(**call) for call in calls or []]
+        self.puts = [Option(**put) for put in puts or []]

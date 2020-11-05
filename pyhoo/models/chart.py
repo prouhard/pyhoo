@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 import enum
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import List, Optional
 
-from pyhoo.models.abc import BaseModel
+from pyhoo.models.abc import BaseModel, OptionalFieldsModel
 from pyhoo.types.chart import (
+    ChartMetaDictBase,
     CurrentTradingPeriodDict,
     IndicatorsDict,
-    ChartMetaDictBase,
     TradingPeriodDict,
 )
 
@@ -28,28 +28,20 @@ class Interval(enum.Enum):
     THREE_MONTHS = "3mo"
 
 
-@dataclass
-class Quote:
+@dataclass(frozen=True)
+class Quote(OptionalFieldsModel):
 
-    high: List[float] = field(default_factory=list)
-    volume: List[float] = field(default_factory=list)
-    open: List[float] = field(default_factory=list)
-    close: List[float] = field(default_factory=list)
-    low: List[float] = field(default_factory=list)
-
-    def __add__(self, quote: Quote) -> Quote:
-        return Quote(
-            **{attr: getattr(self, attr) + getattr(quote, attr) for attr in ["high", "low", "volume", "open", "close"]}
-        )
+    high: List[float]
+    volume: List[float]
+    open: List[float]
+    close: List[float]
+    low: List[float]
 
 
-@dataclass
-class AdjClose(BaseModel):
+@dataclass(frozen=True)
+class AdjClose(OptionalFieldsModel):
 
-    adjclose: List[float] = field(default_factory=list)
-
-    def __add__(self, adjclose: AdjClose) -> AdjClose:
-        return AdjClose(self.adjclose + adjclose.adjclose)
+    adjclose: List[float]
 
 
 class Indicators(BaseModel):
@@ -62,8 +54,8 @@ class Indicators(BaseModel):
         self.adjclose = AdjClose(**indicators["adjclose"][0])
 
 
-@dataclass
-class TradingPeriod:
+@dataclass(frozen=True)
+class TradingPeriod(OptionalFieldsModel):
 
     timezone: str
     start: int

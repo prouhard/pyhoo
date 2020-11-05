@@ -141,7 +141,8 @@ endpoints_config = {
                 name="granularity",
                 api_name="interval",
                 type=str,
-                required=False,
+                required=True,
+                default="1d",
                 options=["1m", "2m", "5m", "15m", "30m", "1h", "1d", "5d", "1w", "1mo", "3mo"],
             ),
             ParamConfig(
@@ -178,7 +179,7 @@ endpoints_config = {
                 type=list,
                 required=True,
                 options=fundamentals_type_options,
-                default=(f"annual{value}" for value in fundamentals_type_options),
+                default=[f"annual{value}" for value in fundamentals_type_options],
                 converter=lambda values: ",".join(values),
                 prefixes=["monthly", "quarterly", "annual"],
             ),

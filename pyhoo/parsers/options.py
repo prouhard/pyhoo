@@ -23,14 +23,14 @@ class OptionsParser(BaseParser):
         strikes: List[float],
         hasMiniOptions: bool,
         quote: OptionQuoteDict,
-        options: Sequence[OptionsDict],
+        options: Sequence[OptionsDict] = None,
     ) -> None:
         self.underlyingSymbol = underlyingSymbol
         self.expirationDates = Timestamp(expirationDates)
         self.strikes = Strikes(strikes)
         self.hasMiniOptions = hasMiniOptions
         self.quote = OptionQuote(**quote)
-        self.options = Options(**options[0])
+        self.options = Options(**options[0]) if options else Options()
 
     def to_records(self) -> List[OptionsDataRecord]:
         return [
