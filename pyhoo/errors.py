@@ -23,3 +23,8 @@ class InvalidParameterTypeError(CustomException):
 class InvalidParameterPrefixError(CustomException):
     def __init__(self, param: str, value: Any, prefixes: Iterable[str]) -> None:
         super().__init__(f"'{param}' has invalid prefix, it must starts with one of {prefixes}.")
+
+
+class MissingParameterError(CustomException):
+    def __init__(self, param: str) -> None:
+        super().__init__(f"Missing parameter '{param}'.")

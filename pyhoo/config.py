@@ -16,6 +16,7 @@ from pyhoo.errors import (
     InvalidParameterPrefixError,
     InvalidParameterTypeError,
     InvalidParameterValueError,
+    MissingParameterError,
     UnknownParameterError,
 )
 from pyhoo.parsers import ChartParser, FundamentalsParser, OptionsParser
@@ -98,7 +99,10 @@ class Config:
             param_config.validate(value)
         for param, param_config in self.params_config.items():
             if param_config.required and param not in params:
-                params[param] = param_config.default
+                if param_config.default is not None:
+                    params[param] = param_config.default
+                else:
+                    raise MissingParameterError(param)
 
     def format(self, params: Dict[str, Any]) -> Dict[str, Any]:
         return {
@@ -125,14 +129,14 @@ endpoints_config = {
                 name="start",
                 api_name="period1",
                 type=str,
-                required=False,
+                required=True,
                 converter=str_date_to_timestamp,
             ),
             ParamConfig(
                 name="end",
                 api_name="period2",
                 type=str,
-                required=False,
+                required=True,
                 converter=str_date_to_timestamp,
             ),
             ParamConfig(

@@ -1,5 +1,5 @@
 import asyncio
-from typing import Any, Dict, Iterable, Type
+from typing import Any, Dict, Iterable, Type, Union, cast
 
 import pandas as pd
 
@@ -11,10 +11,12 @@ from pyhoo.types import ApiResponse, Endpoint
 
 def get(
     endpoint: Endpoint,
-    tickers: Iterable[str],
+    tickers: Union[str, Iterable[str]],
     max_concurrent_calls: int = 100,
     **params: Any,
 ) -> pd.DataFrame:
+    if not _is_iterable(tickers):
+        tickers = [cast(str, tickers)]
     endpoint_config = endpoints_config[endpoint]
     endpoint_config.validate(params)
     batch_tickers_data = asyncio.run(
@@ -30,6 +32,11 @@ def get(
         response_field=endpoint_config.response_field,
         parser=endpoint_config.parser,
     )
+
+
+def _is_iterable(obj: Any) -> bool:
+    """Check that an object is iterable but not a string (strings are iterable)."""
+    return hasattr(obj, "__iter__") and not isinstance(obj, str)
 
 
 def _convert_to_dataframe(
