@@ -23,9 +23,9 @@ class GetTickerDataTask:
         self._ticker = ticker
         self._params = params
 
-    async def run(self, session: aiohttp.ClientSession) -> ApiResponse:
+    async def run(self, session: aiohttp.ClientSession) -> Dict[str, ApiResponse]:
         response = await session.request("GET", url=self._url)
-        data = cast(ApiResponse, await response.json())
+        data = cast(Dict[str, ApiResponse], await response.json())
         return data
 
     @property

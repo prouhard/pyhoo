@@ -28,3 +28,8 @@ class InvalidParameterPrefixError(CustomException):
 class MissingParameterError(CustomException):
     def __init__(self, param: str) -> None:
         super().__init__(f"Missing parameter '{param}'.")
+
+
+class ApiError(CustomException):
+    def __init__(self, code: str, description: str) -> None:
+        super().__init__(f"Got error '{code}' from Yahoo Finance API, reason was: '{description}'")
