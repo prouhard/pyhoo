@@ -3,8 +3,12 @@ python:
   - "3.8.5"
 cache: pip
 install:
-  - pipenv install --dev
+  - pip install poetry
+  - poetry --version
+  - poetry config virtualenvs.path --unset
+  - poetry config virtualenvs.in-project true
+  - poetry install -vv
 script:
-  - python -m pytest test/
-  - python -m flake8 pyhoo/ test/
-  - python -m mypy pyhoo/ test/
+  - python -m pytest tests/
+  - python -m flake8 pyhoo/ tests/
+  - python -m mypy pyhoo/ tests/

@@ -7,17 +7,17 @@ from aiohttp import ClientSession
 from pyhoo.getter import GetTickerDataTask
 from pyhoo.models.chart import Interval
 
-with open("test/unit/responses/chart.json", "r") as file:
+with open("tests/unit/responses/chart.json", "r") as file:
     mock_chart = json.load(file)
 
-with open("test/unit/responses/fundamentals.json", "r") as file:
+with open("tests/unit/responses/fundamentals.json", "r") as file:
     mock_fundamentals = json.load(file)
 
-with open("test/unit/responses/options.json", "r") as file:
+with open("tests/unit/responses/options.json", "r") as file:
     mock_options = json.load(file)
 
 
-from test.mock.session import MockSession
+from tests.mock.session import MockSession
 
 
 @pytest.mark.asyncio

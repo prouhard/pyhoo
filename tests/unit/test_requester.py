@@ -7,13 +7,13 @@ from pyhoo.getter import GetTickerDataTask
 from pyhoo.models.chart import Interval
 from pyhoo.requester import Requester
 
-with open("test/unit/responses/chart.json", "r") as file:
+with open("tests/unit/responses/chart.json", "r") as file:
     mock_chart = json.load(file)
 
-with open("test/unit/responses/fundamentals.json", "r") as file:
+with open("tests/unit/responses/fundamentals.json", "r") as file:
     mock_fundamentals = json.load(file)
 
-with open("test/unit/responses/options.json", "r") as file:
+with open("tests/unit/responses/options.json", "r") as file:
     mock_options = json.load(file)
 
 

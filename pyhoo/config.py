@@ -1,4 +1,5 @@
 import datetime
+from pathlib import Path
 from typing import (
     Any,
     Callable,
@@ -23,7 +24,7 @@ from pyhoo.parsers.abc import BaseParser
 T = TypeVar("T")
 V = TypeVar("V")
 
-FUNDAMENTALS_TYPE_OPTIONS_PATH = "pyhoo/data/fundamentals_type_options.txt"
+FUNDAMENTALS_TYPE_OPTIONS_PATH = Path(__file__).parent / "data/fundamentals_type_options.txt"
 
 
 class ParamConfig:

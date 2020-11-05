@@ -6,15 +6,15 @@ from aiohttp import ClientSession
 
 from pyhoo import get
 from pyhoo.config import str_date_to_timestamp
-from test.mock.session import MockSession
+from tests.mock.session import MockSession
 
-with open("test/unit/responses/chart.json", "r") as file:
+with open("tests/unit/responses/chart.json", "r") as file:
     mock_chart = json.load(file)
 
-with open("test/unit/responses/fundamentals.json", "r") as file:
+with open("tests/unit/responses/fundamentals.json", "r") as file:
     mock_fundamentals = json.load(file)
 
-with open("test/unit/responses/options.json", "r") as file:
+with open("tests/unit/responses/options.json", "r") as file:
     mock_options = json.load(file)
 
 
