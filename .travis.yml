@@ -6,4 +6,5 @@ install:
   - pipenv install --dev
 script:
   - python -m pytest test/
+  - python -m flake8 pyhoo/ test/
   - python -m mypy pyhoo/ test/

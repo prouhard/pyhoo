@@ -73,7 +73,7 @@ class ParamConfig:
             prefix_lengths = [len(prefix) for prefix in self.prefixes if value.startswith(prefix)]
             if prefix_lengths:
                 # We match the longest prefix
-                return value[max(prefix_lengths) :]  # noqa: E203 whitespace before ':'
+                return value[max(prefix_lengths) :]
             else:
                 raise InvalidParameterPrefixError(self.name, value, self.prefixes)
         return value
