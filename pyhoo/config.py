@@ -98,6 +98,9 @@ class Config:
             if param_config is None:
                 raise UnknownParameterError(param, self.params_config)
             param_config.validate(value)
+        for param, param_config in self.params_config.items():
+            if param_config.required and param not in params:
+                params[param] = param_config.default
 
     def format(self, params: Dict[str, Any]) -> Dict[str, Any]:
         return {
@@ -175,7 +178,7 @@ endpoints_config = {
                 type=list,
                 required=True,
                 options=fundamentals_type_options,
-                default=fundamentals_type_options,
+                default=(f"annual{value}" for value in fundamentals_type_options),
                 converter=lambda values: ",".join(values),
                 prefixes=["monthly", "quarterly", "annual"],
             ),

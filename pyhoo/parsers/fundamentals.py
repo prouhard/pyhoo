@@ -1,4 +1,4 @@
-from typing import Dict, Iterable, List
+from typing import Dict, Iterable, List, Optional
 
 from pyhoo.models.fundamentals import FundamentalsMeta, FundamentalsRow
 from pyhoo.models.iterables import Timestamp
@@ -14,11 +14,11 @@ class FundamentalsParser(BaseParser):
     def __init__(
         self,
         meta: FundamentalsMetaDict,
-        timestamp: List[int],
+        timestamp: Optional[List[int]] = None,
         **data: Iterable[FundamentalsRowDict],
     ) -> None:
         self.meta = FundamentalsMeta(**meta)
-        self.timestamp = Timestamp(timestamp)
+        self.timestamp = Timestamp(timestamp or [])
         self._parse_data(data)
 
     def _parse_data(self, data: Dict[str, Iterable[FundamentalsRowDict]]) -> None:
