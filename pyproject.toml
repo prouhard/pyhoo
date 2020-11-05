@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyhoo"
-version = "0.1.0"
+version = "0.1.1"
 description = "Yet another unofficial Yahoo Finance API, but with concurrent requests"
 authors = ["ROUHARD Pierre <pierrerouhard@gmail.com>"]
 license = "MIT"
