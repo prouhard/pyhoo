@@ -9,6 +9,8 @@ install:
   - poetry config virtualenvs.in-project true
   - poetry install -vv
 script:
-  - python -m pytest tests/
+  - python -m pytest -vv --cov-report term --cov=pyhoo/ --cov-fail-under=90
   - python -m flake8 pyhoo/ tests/
   - python -m mypy pyhoo/ tests/
+after_success:
+  - codecov

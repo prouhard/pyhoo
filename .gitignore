@@ -13,3 +13,7 @@ __pycache__
 # Poetry
 poetry.lock
 dist/
+
+# Coverage
+coverage/
+.coverage
