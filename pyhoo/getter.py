@@ -2,7 +2,6 @@ from typing import Any, Dict, cast
 
 import aiohttp
 
-from pyhoo.config import logging
 from pyhoo.types import ApiResponse
 
 
@@ -25,10 +24,8 @@ class GetTickerDataTask:
         self._params = params
 
     async def run(self, session: aiohttp.ClientSession) -> ApiResponse:
-        logging.info(f"Getting URL {self._url} ...")
         response = await session.request("GET", url=self._url)
         data = cast(ApiResponse, await response.json())
-        logging.info(f"Received data for {self._url} !")
         return data
 
     @property

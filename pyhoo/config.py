@@ -1,5 +1,4 @@
 import datetime
-import logging
 from typing import (
     Any,
     Callable,
@@ -23,8 +22,6 @@ from pyhoo.parsers.abc import BaseParser
 
 T = TypeVar("T")
 V = TypeVar("V")
-
-logging.basicConfig(filename="output.log", level=logging.INFO)
 
 FUNDAMENTALS_TYPE_OPTIONS_PATH = "pyhoo/data/fundamentals_type_options.txt"
 
