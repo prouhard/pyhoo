@@ -1,5 +1,5 @@
 import abc
-from typing import Any, List, Mapping
+from typing import Any, List
 
 
 class BaseParser(metaclass=abc.ABCMeta):

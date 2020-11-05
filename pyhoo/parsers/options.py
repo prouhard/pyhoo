@@ -4,11 +4,7 @@ from typing import List, Sequence, cast
 from pyhoo.models.iterables import Strikes, Timestamp
 from pyhoo.models.options import OptionQuote, Options
 from pyhoo.parsers.abc import BaseParser
-from pyhoo.types.options import (
-    OptionQuoteDict,
-    OptionsDataRecord,
-    OptionsDict,
-)
+from pyhoo.types.options import OptionQuoteDict, OptionsDataRecord, OptionsDict
 
 
 class OptionsParser(BaseParser):
