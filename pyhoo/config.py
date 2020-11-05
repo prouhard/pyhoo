@@ -18,7 +18,7 @@ from pyhoo.errors import (
     InvalidParameterValueError,
     UnknownParameterError,
 )
-from pyhoo.parsers import FundamentalsParser, OptionsParser, ChartParser
+from pyhoo.parsers import ChartParser, FundamentalsParser, OptionsParser
 from pyhoo.parsers.abc import BaseParser
 
 T = TypeVar("T")
@@ -114,7 +114,7 @@ with open(FUNDAMENTALS_TYPE_OPTIONS_PATH, "r") as file:
     fundamentals_type_options = [line.strip() for line in file.readlines()]
 
 
-config = {
+endpoints_config = {
     "chart": Config(
         path="v8/finance/chart",
         response_field="chart",

@@ -5,6 +5,7 @@ from unittest.mock import MagicMock, patch
 from aiohttp import ClientSession
 
 from pyhoo import get
+from pyhoo.config import str_date_to_timestamp
 from test.mock.session import MockSession
 
 with open("test/unit/responses/chart.json", "r") as file:
@@ -17,13 +18,15 @@ with open("test/unit/responses/options.json", "r") as file:
     mock_options = json.load(file)
 
 
-BASE_URL = "https://query2.finance.yahoo.com"
-
-
 @patch("pyhoo.requester.aiohttp.ClientSession")
 def test_get_chart(client_session_mock: MagicMock) -> None:
 
-    url = "https://query2.finance.yahoo.com/v8/finance/chart/NVDA?period1=1601503200&period2=1602108000&interval=1d"
+    start = "2020-10-01"
+    end = "2020-10-08"
+    period1 = str_date_to_timestamp(start)
+    period2 = str_date_to_timestamp(end)
+
+    url = f"https://query2.finance.yahoo.com/v8/finance/chart/NVDA?period1={period1}&period2={period2}&interval=1d"
 
     session = cast(ClientSession, MockSession())
     client_session_mock.return_value = session
@@ -44,9 +47,14 @@ def test_get_chart(client_session_mock: MagicMock) -> None:
 @patch("pyhoo.requester.aiohttp.ClientSession")
 def test_get_fundamentals(client_session_mock: MagicMock) -> None:
 
+    start = "2020-10-01"
+    end = "2020-10-08"
+    period1 = str_date_to_timestamp(start)
+    period2 = str_date_to_timestamp(end)
+
     url = (
         "https://query2.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/NVDA"
-        "?period1=1601503200&period2=1602108000&type=annualWorkInProcess,annualConstructionInProgress"
+        f"?period1={period1}&period2={period2}&type=annualWorkInProcess,annualConstructionInProgress"
     )
 
     session = cast(ClientSession, MockSession())

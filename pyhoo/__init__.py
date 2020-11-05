@@ -3,7 +3,7 @@ from typing import Any, Dict, Iterable, Type
 
 import pandas as pd
 
-from pyhoo.config import config
+from pyhoo.config import endpoints_config
 from pyhoo.parsers.abc import BaseParser
 from pyhoo.requester import Requester
 from pyhoo.types import ApiResponse, Endpoint
@@ -15,7 +15,7 @@ def get(
     max_concurrent_calls: int = 100,
     **params: Any,
 ) -> pd.DataFrame:
-    endpoint_config = config[endpoint]
+    endpoint_config = endpoints_config[endpoint]
     endpoint_config.validate(params)
     batch_tickers_data = asyncio.run(
         Requester(
