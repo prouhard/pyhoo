@@ -7,6 +7,23 @@
 
 _Yet another unofficial Yahoo Finance API library but with concurrent requests._
 
+**Index**
+
+1. [Installation](#installation)
+1. [Usage](#usage)
+1. [Troubleshooting](#troubleshooting)
+1. [Contributing](#contributing)
+
+## Installation
+
+**Pyhoo requires Python >= 3.8**
+
+```bash
+pip install pyhoo
+```
+
+## Usage
+
 Pyhoo is **simple**:
 
 ```python
@@ -66,3 +83,24 @@ nest_asyncio.apply()
 ```
 
 And you should be ok !
+
+## Contributing
+
+Contributions are welcome !
+
+Pyhoo uses [poetry](https://python-poetry.org) as package manager. You can find the installation instructions [here](https://python-poetry.org/docs/#installation).
+
+It is recommended to install the virtual environment in the project folder if you use VSCode, to help the linter resolve imports:
+
+```bash
+poetry config virtualenvs.path --unset
+poetry config virtualenvs.in-project true
+```
+
+Once Poetry is configured, you can install required dependencies with:
+
+```bash
+poetry install
+```
+
+The CI enforces strict typing, linting and coverage.
