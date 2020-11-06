@@ -1,9 +1,10 @@
+from itertools import zip_longest
 from typing import List, cast
 
+from pyhoo.models.chart import ChartMeta, Indicators
 from pyhoo.models.iterables import Timestamp
-from pyhoo.models.chart import Indicators, ChartMeta
 from pyhoo.parsers.abc import BaseParser
-from pyhoo.types.chart import IndicatorsDict, ChartDataRecord, ChartMetaDict
+from pyhoo.types.chart import ChartDataRecord, ChartMetaDict, IndicatorsDict
 
 
 class ChartParser(BaseParser):
@@ -32,7 +33,7 @@ class ChartParser(BaseParser):
                     **self.meta.to_dict(),
                 },
             )
-            for timestamp, high, low, volume, open, close, adjclose in zip(
+            for timestamp, high, low, volume, open, close, adjclose in zip_longest(
                 self.timestamp,
                 self.indicators.quote.high,
                 self.indicators.quote.low,

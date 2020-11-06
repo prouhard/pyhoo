@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Sequence, TypeVar
+from typing import Optional, Sequence, TypeVar
 
 from pyhoo.models.abc import BaseModel, OptionalFieldsModel
 from pyhoo.types.fundamentals import ReportedValueDict
@@ -18,7 +18,7 @@ class FundamentalsRow(BaseModel):
     asOfDate: str
     periodType: str
     reportedValue: ReportedValue
-    currencyCode: str
+    currencyCode: Optional[str]
 
     def __init__(
         self,
@@ -26,7 +26,7 @@ class FundamentalsRow(BaseModel):
         asOfDate: str,
         periodType: str,
         reportedValue: ReportedValueDict,
-        currencyCode: str = "",
+        currencyCode: Optional[str] = None,
     ) -> None:
         self.dataId = dataId
         self.asOfDate = asOfDate
@@ -35,7 +35,7 @@ class FundamentalsRow(BaseModel):
         self.currencyCode = currencyCode
 
 
-T = TypeVar("T")
+_T = TypeVar("_T")
 
 
 class FundamentalsMeta(BaseModel):
@@ -48,5 +48,5 @@ class FundamentalsMeta(BaseModel):
         self.type = self._get_first_element(type)
 
     @staticmethod
-    def _get_first_element(sequence: Sequence[T]) -> T:
+    def _get_first_element(sequence: Sequence[_T]) -> _T:
         return sequence[0]

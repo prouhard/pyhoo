@@ -1,7 +1,7 @@
-from typing import List, TypedDict
+from typing import List, Optional, TypedDict
 
 
-class QuoteDict(TypedDict):
+class QuoteDict(TypedDict, total=False):
 
     high: List[float]
     volume: List[float]
@@ -10,7 +10,7 @@ class QuoteDict(TypedDict):
     low: List[float]
 
 
-class AdjCloseDict(TypedDict):
+class AdjCloseDict(TypedDict, total=False):
 
     adjclose: List[float]
 
@@ -51,16 +51,20 @@ class ChartMetaDictBase(TypedDict):
     chartPreviousClose: float
     priceHint: int
     dataGranularity: str
-    range: str
+    range: Optional[str]
+    scale: Optional[int]
+    previousClose: Optional[float]
 
 
-class ChartMetaDict(ChartMetaDictBase):
+class ChartMetaDict(ChartMetaDictBase, total=False):
 
     currentTradingPeriod: CurrentTradingPeriodDict
     validRanges: List[str]
+    tradingPeriods: List[List[TradingPeriodDict]]
 
 
-class ChartDataRecord(TypedDict):
+class ChartDataRecord(ChartMetaDictBase):
+
     timestamp: int
     high: float
     low: float
@@ -68,17 +72,3 @@ class ChartDataRecord(TypedDict):
     open: float
     close: float
     adjclose: float
-    currency: str
-    symbol: str
-    exchangeName: str
-    instrumentType: str
-    firstTradeDate: int
-    regularMarketTime: int
-    gmtoffset: int
-    timezone: str
-    exchangeTimezoneName: str
-    regularMarketPrice: float
-    chartPreviousClose: float
-    priceHint: int
-    dataGranularity: str
-    range: str

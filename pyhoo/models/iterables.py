@@ -14,43 +14,43 @@ from typing import Generic, List, TypeVar
 
 from pyhoo.models.abc import BaseModel
 
-T = TypeVar("T")
+_T = TypeVar("_T")
 
 
-class CustomIterable(BaseModel, Generic[T]):
+class CustomIterable(BaseModel, Generic[_T]):
 
-    _values: List[T]
+    _values: List[_T]
 
-    def __init__(self, values: List[T]) -> None:
+    def __init__(self, values: List[_T]) -> None:
         self._values = values
 
-    def __iter__(self) -> "CustomIterator[T]":
+    def __iter__(self) -> "CustomIterator[_T]":
         return CustomIterator(self)
 
-    def __getitem__(self, index: int) -> T:
+    def __getitem__(self, index: int) -> _T:
         return self._values[index]
 
     def __len__(self) -> int:
         return len(self._values)
 
 
-class CustomIterator(Generic[T]):
+class CustomIterator(Generic[_T]):
 
-    _iterable: CustomIterable[T]
+    _iterable: CustomIterable[_T]
     _index: int
 
-    def __init__(self, iterable: CustomIterable[T]) -> None:
+    def __init__(self, iterable: CustomIterable[_T]) -> None:
         self._iterable = iterable
         self._index = 0
 
-    def __next__(self) -> T:
+    def __next__(self) -> _T:
         if self._index < len(self._iterable):
             result = self._iterable[self._index]
             self._index += 1
             return result
         raise StopIteration
 
-    def __iter__(self) -> CustomIterator[T]:
+    def __iter__(self) -> CustomIterator[_T]:
         return self
 
 
