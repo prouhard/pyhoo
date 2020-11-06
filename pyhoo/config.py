@@ -22,8 +22,8 @@ from pyhoo.errors import (
 from pyhoo.parsers import ChartParser, FundamentalsParser, OptionsParser
 from pyhoo.parsers.abc import BaseParser
 
-T = TypeVar("T")
-V = TypeVar("V")
+_T = TypeVar("_T")
+_V = TypeVar("_V")
 
 FUNDAMENTALS_TYPE_OPTIONS_PATH = Path(__file__).parent / "data/fundamentals_type_options.txt"
 
@@ -33,11 +33,11 @@ class ParamConfig:
         self,
         name: str,
         api_name: str,
-        type: Type[T],
+        type: Type[_T],
         required: bool = False,
-        converter: Optional[Callable[[T], V]] = None,
+        converter: Optional[Callable[[_T], _V]] = None,
         default: Optional[Any] = None,
-        options: Optional[Iterable[T]] = None,
+        options: Optional[Iterable[_T]] = None,
         prefixes: Optional[Iterable[str]] = None,
     ) -> None:
         self.name = name
@@ -49,17 +49,17 @@ class ParamConfig:
         self.options = {option for option in options or []}
         self.prefixes = prefixes or []
 
-    def validate(self, value: T) -> None:
+    def validate(self, value: _T) -> None:
         if not isinstance(value, self.type):
             raise InvalidParameterTypeError(self.name, type(value), self.type)
         if self.options:
-            values = cast(Iterable[T], [value] if self.type != list else value)
+            values = cast(Iterable[_T], [value] if self.type != list else value)
             for _value in values:
                 unprefixed_value = self._unprefix(cast(str, _value))
                 if unprefixed_value not in self.options:
                     raise InvalidParameterValueError(self.name, unprefixed_value, self.options)
 
-    def format(self, value: T) -> Union[T, V]:
+    def format(self, value: _T) -> Union[_T, _V]:
         if self.converter:
             return self.converter(value)
         return value

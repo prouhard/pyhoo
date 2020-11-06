@@ -1,0 +1,2241 @@
+{
+  "timeseries": {
+    "result": [
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNetIncomeContinuousOperations"]
+        },
+        "timestamp": [1601424000],
+        "annualNetIncomeContinuousOperations": [
+          {
+            "dataId": 20094,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 57411000000.0, "fmt": "57.41B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTaxEffectOfUnusualItems"]
+        },
+        "timestamp": [1601424000],
+        "annualTaxEffectOfUnusualItems": [
+          {
+            "dataId": 20419,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 0.0, "fmt": "0.00" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCashAndCashEquivalents"]
+        },
+        "timestamp": [1601424000],
+        "annualCashAndCashEquivalents": [
+          {
+            "dataId": 23030,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 38016000000.0, "fmt": "38.02B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTotalOperatingIncomeAsReported"]
+        },
+        "timestamp": [1601424000],
+        "annualTotalOperatingIncomeAsReported": [
+          {
+            "dataId": 20435,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 66288000000.0, "fmt": "66.29B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualMachineryFurnitureEquipment"]
+        },
+        "timestamp": [1601424000],
+        "annualMachineryFurnitureEquipment": [
+          {
+            "dataId": 23319,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 75291000000.0, "fmt": "75.29B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualBasicAverageShares"] },
+        "timestamp": [1601424000],
+        "annualBasicAverageShares": [
+          {
+            "dataId": 29010,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 17352119000.0, "fmt": "17.35B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualProperties"] },
+        "timestamp": [1601424000],
+        "annualProperties": [
+          {
+            "dataId": 23351,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 0.0, "fmt": "0.00" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualInvestmentsAndAdvances"]
+        },
+        "timestamp": [1601424000],
+        "annualInvestmentsAndAdvances": [
+          {
+            "dataId": 23111,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 100887000000.0, "fmt": "100.89B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualAvailableForSaleSecurities"]
+        },
+        "timestamp": [1601424000],
+        "annualAvailableForSaleSecurities": [
+          {
+            "dataId": 23020,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 100887000000.0, "fmt": "100.89B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNetOtherFinancingCharges"]
+        },
+        "timestamp": [1601424000],
+        "annualNetOtherFinancingCharges": [
+          {
+            "dataId": 26164,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -3760000000.0, "fmt": "-3.76B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCapitalExpenditure"] },
+        "timestamp": [1601424000],
+        "annualCapitalExpenditure": [
+          {
+            "dataId": 26005,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -7309000000.0, "fmt": "-7.31B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOperatingExpense"] },
+        "timestamp": [1601424000],
+        "annualOperatingExpense": [
+          {
+            "dataId": 20108,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 38668000000.0, "fmt": "38.67B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCurrentDeferredRevenue"]
+        },
+        "timestamp": [1601424000],
+        "annualCurrentDeferredRevenue": [
+          {
+            "dataId": 23061,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 6643000000.0, "fmt": "6.64B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTotalRevenue"] },
+        "timestamp": [1601424000],
+        "annualTotalRevenue": [
+          {
+            "dataId": 20100,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 274515000000.0, "fmt": "274.51B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualResearchAndDevelopment"]
+        },
+        "timestamp": [1601424000],
+        "annualResearchAndDevelopment": [
+          {
+            "dataId": 20151,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 18752000000.0, "fmt": "18.75B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualPayablesAndAccruedExpenses"]
+        },
+        "timestamp": [1601424000],
+        "annualPayablesAndAccruedExpenses": [
+          {
+            "dataId": 23166,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 42296000000.0, "fmt": "42.30B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTotalNonCurrentLiabilitiesNetMinorityInterest"]
+        },
+        "timestamp": [1601424000],
+        "annualTotalNonCurrentLiabilitiesNetMinorityInterest": [
+          {
+            "dataId": 23260,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 153157000000.0, "fmt": "153.16B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualChangesInAccountReceivables"]
+        },
+        "timestamp": [1601424000],
+        "annualChangesInAccountReceivables": [
+          {
+            "dataId": 26137,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 6917000000.0, "fmt": "6.92B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualChangeInAccountPayable"]
+        },
+        "timestamp": [1601424000],
+        "annualChangeInAccountPayable": [
+          {
+            "dataId": 26022,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -4062000000.0, "fmt": "-4.06B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualDeferredIncomeTax"] },
+        "timestamp": [1601424000],
+        "annualDeferredIncomeTax": [
+          {
+            "dataId": 26056,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -215000000.0, "fmt": "-215.00M" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualInterestExpense"] },
+        "timestamp": [1601424000],
+        "annualInterestExpense": [
+          {
+            "dataId": 20057,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 2873000000.0, "fmt": "2.87B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCashFinancial"] },
+        "timestamp": [1601424000],
+        "annualCashFinancial": [
+          {
+            "dataId": 23028,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 17773000000.0, "fmt": "17.77B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualPeRatio"] },
+        "timestamp": [1601424000],
+        "annualPeRatio": [
+          {
+            "dataId": 14008,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "reportedValue": { "raw": 35.120546, "fmt": "35.12" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualOtherShortTermInvestments"]
+        },
+        "timestamp": [1601424000],
+        "annualOtherShortTermInvestments": [
+          {
+            "dataId": 23163,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 52927000000.0, "fmt": "52.93B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualNormalizedEBITDA"] },
+        "timestamp": [1601424000],
+        "annualNormalizedEBITDA": [
+          {
+            "dataId": 20420,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 81020000000.0, "fmt": "81.02B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualBasicEPS"] },
+        "timestamp": [1601424000],
+        "annualBasicEPS": [
+          {
+            "dataId": 29004,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 3.31, "fmt": "3.31" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualAccumulatedDepreciation"]
+        },
+        "timestamp": [1601424000],
+        "annualAccumulatedDepreciation": [
+          {
+            "dataId": 23008,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -66760000000.0, "fmt": "-66.76B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTotalDebt"] },
+        "timestamp": [1601424000],
+        "annualTotalDebt": [
+          {
+            "dataId": 23386,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 112436000000.0, "fmt": "112.44B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualEnterprisesValueEBITDARatio"]
+        },
+        "timestamp": [1601424000],
+        "annualEnterprisesValueEBITDARatio": [
+          {
+            "dataId": 102,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "reportedValue": { "raw": 24.509713, "fmt": "24.51" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualChangeInWorkingCapital"]
+        },
+        "timestamp": [1601424000],
+        "annualChangeInWorkingCapital": [
+          {
+            "dataId": 26053,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 5690000000.0, "fmt": "5.69B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOtherNonCurrentAssets"] },
+        "timestamp": [1601424000],
+        "annualOtherNonCurrentAssets": [
+          {
+            "dataId": 23339,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 42522000000.0, "fmt": "42.52B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCurrentAssets"] },
+        "timestamp": [1601424000],
+        "annualCurrentAssets": [
+          {
+            "dataId": 23044,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 143713000000.0, "fmt": "143.71B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNetNonOperatingInterestIncomeExpense"]
+        },
+        "timestamp": [1601424000],
+        "annualNetNonOperatingInterestIncomeExpense": [
+          {
+            "dataId": 20077,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 890000000.0, "fmt": "890.00M" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualMarketCap"] },
+        "timestamp": [1601424000],
+        "annualMarketCap": [
+          {
+            "dataId": 40001,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "reportedValue": { "raw": 1966078923030.0, "fmt": "1.97T" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTaxRateForCalcs"] },
+        "timestamp": [1601424000],
+        "annualTaxRateForCalcs": [
+          {
+            "dataId": 20418,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 0.144, "fmt": "0.14" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCurrentDeferredLiabilities"]
+        },
+        "timestamp": [1601424000],
+        "annualCurrentDeferredLiabilities": [
+          {
+            "dataId": 23058,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 6643000000.0, "fmt": "6.64B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualDilutedAverageShares"] },
+        "timestamp": [1601424000],
+        "annualDilutedAverageShares": [
+          {
+            "dataId": 29011,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 17528214000.0, "fmt": "17.53B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualWorkingCapital"] },
+        "timestamp": [1601424000],
+        "annualWorkingCapital": [
+          {
+            "dataId": 23385,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 38321000000.0, "fmt": "38.32B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTotalLiabilitiesNetMinorityInterest"]
+        },
+        "timestamp": [1601424000],
+        "annualTotalLiabilitiesNetMinorityInterest": [
+          {
+            "dataId": 23259,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 258549000000.0, "fmt": "258.55B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTradeandOtherPayablesNonCurrent"]
+        },
+        "timestamp": [1601424000],
+        "annualTradeandOtherPayablesNonCurrent": [
+          {
+            "dataId": 23472,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 28170000000.0, "fmt": "28.17B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualFreeCashFlow"] },
+        "timestamp": [1601424000],
+        "annualFreeCashFlow": [
+          {
+            "dataId": 26185,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 73365000000.0, "fmt": "73.36B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualEBIT"] },
+        "timestamp": [1601424000],
+        "annualEBIT": [
+          {
+            "dataId": 20189,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 69964000000.0, "fmt": "69.96B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualNetIncome"] },
+        "timestamp": [1601424000],
+        "annualNetIncome": [
+          {
+            "dataId": 20091,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 57411000000.0, "fmt": "57.41B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualRetainedEarnings"] },
+        "timestamp": [1601424000],
+        "annualRetainedEarnings": [
+          {
+            "dataId": 23204,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 14966000000.0, "fmt": "14.97B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualNormalizedIncome"] },
+        "timestamp": [1601424000],
+        "annualNormalizedIncome": [
+          {
+            "dataId": 20316,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 57411000000.0, "fmt": "57.41B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTotalEquityGrossMinorityInterest"]
+        },
+        "timestamp": [1601424000],
+        "annualTotalEquityGrossMinorityInterest": [
+          {
+            "dataId": 23261,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 65339000000.0, "fmt": "65.34B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOtherCurrentAssets"] },
+        "timestamp": [1601424000],
+        "annualOtherCurrentAssets": [
+          {
+            "dataId": 23331,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 11264000000.0, "fmt": "11.26B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCostOfRevenue"] },
+        "timestamp": [1601424000],
+        "annualCostOfRevenue": [
+          {
+            "dataId": 20013,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 169559000000.0, "fmt": "169.56B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualBeginningCashPosition"] },
+        "timestamp": [1601424000],
+        "annualBeginningCashPosition": [
+          {
+            "dataId": 26015,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 50224000000.0, "fmt": "50.22B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualLongTermDebt"] },
+        "timestamp": [1601424000],
+        "annualLongTermDebt": [
+          {
+            "dataId": 23123,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 98667000000.0, "fmt": "98.67B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCashDividendsPaid"] },
+        "timestamp": [1601424000],
+        "annualCashDividendsPaid": [
+          {
+            "dataId": 26007,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -14081000000.0, "fmt": "-14.08B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualEnterprisesValueRevenueRatio"]
+        },
+        "timestamp": [1601424000],
+        "annualEnterprisesValueRevenueRatio": [
+          {
+            "dataId": 101,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "reportedValue": { "raw": 7.233765, "fmt": "7.23" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualInvestedCapital"] },
+        "timestamp": [1601424000],
+        "annualInvestedCapital": [
+          {
+            "dataId": 23245,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 177775000000.0, "fmt": "177.78B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCurrentDebt"] },
+        "timestamp": [1601424000],
+        "annualCurrentDebt": [
+          {
+            "dataId": 23045,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 13769000000.0, "fmt": "13.77B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTaxProvision"] },
+        "timestamp": [1601424000],
+        "annualTaxProvision": [
+          {
+            "dataId": 20145,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 9680000000.0, "fmt": "9.68B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualInterestIncomeNonOperating"]
+        },
+        "timestamp": [1601424000],
+        "annualInterestIncomeNonOperating": [
+          {
+            "dataId": 20075,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 3763000000.0, "fmt": "3.76B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTotalAssets"] },
+        "timestamp": [1601424000],
+        "annualTotalAssets": [
+          {
+            "dataId": 23220,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 323888000000.0, "fmt": "323.89B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOrdinarySharesNumber"] },
+        "timestamp": [1601424000],
+        "annualOrdinarySharesNumber": [
+          {
+            "dataId": 23393,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 16976763000.0, "fmt": "16.98B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOtherReceivables"] },
+        "timestamp": [1601424000],
+        "annualOtherReceivables": [
+          {
+            "dataId": 23342,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 21325000000.0, "fmt": "21.32B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCashEquivalents"] },
+        "timestamp": [1601424000],
+        "annualCashEquivalents": [
+          {
+            "dataId": 23029,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 20243000000.0, "fmt": "20.24B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualSellingGeneralAndAdministration"]
+        },
+        "timestamp": [1601424000],
+        "annualSellingGeneralAndAdministration": [
+          {
+            "dataId": 20159,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 19916000000.0, "fmt": "19.92B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTotalNonCurrentAssets"] },
+        "timestamp": [1601424000],
+        "annualTotalNonCurrentAssets": [
+          {
+            "dataId": 23226,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 180175000000.0, "fmt": "180.18B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTotalExpenses"] },
+        "timestamp": [1601424000],
+        "annualTotalExpenses": [
+          {
+            "dataId": 20164,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 208227000000.0, "fmt": "208.23B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualInterestExpenseNonOperating"]
+        },
+        "timestamp": [1601424000],
+        "annualInterestExpenseNonOperating": [
+          {
+            "dataId": 20064,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 2873000000.0, "fmt": "2.87B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOtherNonCashItems"] },
+        "timestamp": [1601424000],
+        "annualOtherNonCashItems": [
+          {
+            "dataId": 26166,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -97000000.0, "fmt": "-97.00M" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualDilutedEPS"] },
+        "timestamp": [1601424000],
+        "annualDilutedEPS": [
+          {
+            "dataId": 29009,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 3.28, "fmt": "3.28" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualNetDebt"] },
+        "timestamp": [1601424000],
+        "annualNetDebt": [
+          {
+            "dataId": 23531,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 74420000000.0, "fmt": "74.42B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualPegRatio"] },
+        "timestamp": [1601424000],
+        "annualPegRatio": [
+          {
+            "dataId": 14021,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "reportedValue": { "raw": 2.8594, "fmt": "2.86" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualPurchaseOfBusiness"] },
+        "timestamp": [1601424000],
+        "annualPurchaseOfBusiness": [
+          {
+            "dataId": 26115,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -1524000000.0, "fmt": "-1.52B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualEnterpriseValue"] },
+        "timestamp": [1601424000],
+        "annualEnterpriseValue": [
+          {
+            "dataId": 40002,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "reportedValue": { "raw": 1985776923030.0, "fmt": "1.99T" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNetIncomeFromContinuingOperationNetMinorityInterest"]
+        },
+        "timestamp": [1601424000],
+        "annualNetIncomeFromContinuingOperationNetMinorityInterest": [
+          {
+            "dataId": 20331,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 57411000000.0, "fmt": "57.41B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualReconciledDepreciation"]
+        },
+        "timestamp": [1601424000],
+        "annualReconciledDepreciation": [
+          {
+            "dataId": 20315,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 11056000000.0, "fmt": "11.06B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDepreciationAndAmortization"]
+        },
+        "timestamp": [1601424000],
+        "annualDepreciationAndAmortization": [
+          {
+            "dataId": 26060,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 11056000000.0, "fmt": "11.06B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualChangeInInventory"] },
+        "timestamp": [1601424000],
+        "annualChangeInInventory": [
+          {
+            "dataId": 26034,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -127000000.0, "fmt": "-127.00M" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualSaleOfInvestment"] },
+        "timestamp": [1601424000],
+        "annualSaleOfInvestment": [
+          {
+            "dataId": 26125,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 120483000000.0, "fmt": "120.48B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualLandAndImprovements"] },
+        "timestamp": [1601424000],
+        "annualLandAndImprovements": [
+          {
+            "dataId": 23312,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 17952000000.0, "fmt": "17.95B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualInvestmentinFinancialAssets"]
+        },
+        "timestamp": [1601424000],
+        "annualInvestmentinFinancialAssets": [
+          {
+            "dataId": 23414,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 100887000000.0, "fmt": "100.89B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTotalCapitalization"] },
+        "timestamp": [1601424000],
+        "annualTotalCapitalization": [
+          {
+            "dataId": 23374,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 164006000000.0, "fmt": "164.01B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualAccountsReceivable"] },
+        "timestamp": [1601424000],
+        "annualAccountsReceivable": [
+          {
+            "dataId": 23001,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 16120000000.0, "fmt": "16.12B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOperatingCashFlow"] },
+        "timestamp": [1601424000],
+        "annualOperatingCashFlow": [
+          {
+            "dataId": 26014,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 80674000000.0, "fmt": "80.67B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualShareIssued"] },
+        "timestamp": [1601424000],
+        "annualShareIssued": [
+          {
+            "dataId": 23532,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 16976763000.0, "fmt": "16.98B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualOtherCurrentBorrowings"]
+        },
+        "timestamp": [1601424000],
+        "annualOtherCurrentBorrowings": [
+          {
+            "dataId": 23332,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 8773000000.0, "fmt": "8.77B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualLongTermDebtAndCapitalLeaseObligation"]
+        },
+        "timestamp": [1601424000],
+        "annualLongTermDebtAndCapitalLeaseObligation": [
+          {
+            "dataId": 23124,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 98667000000.0, "fmt": "98.67B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCashCashEquivalentsAndShortTermInvestments"]
+        },
+        "timestamp": [1601424000],
+        "annualCashCashEquivalentsAndShortTermInvestments": [
+          {
+            "dataId": 23033,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 90943000000.0, "fmt": "90.94B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualReceivables"] },
+        "timestamp": [1601424000],
+        "annualReceivables": [
+          {
+            "dataId": 23189,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 37445000000.0, "fmt": "37.45B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNetIncomeIncludingNoncontrollingInterests"]
+        },
+        "timestamp": [1601424000],
+        "annualNetIncomeIncludingNoncontrollingInterests": [
+          {
+            "dataId": 20346,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 57411000000.0, "fmt": "57.41B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualGrossProfit"] },
+        "timestamp": [1601424000],
+        "annualGrossProfit": [
+          {
+            "dataId": 20046,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 104956000000.0, "fmt": "104.96B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualOtherNonOperatingIncomeExpenses"]
+        },
+        "timestamp": [1601424000],
+        "annualOtherNonOperatingIncomeExpenses": [
+          {
+            "dataId": 20412,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -87000000.0, "fmt": "-87.00M" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualPsRatio"] },
+        "timestamp": [1601424000],
+        "annualPsRatio": [
+          {
+            "dataId": 14010,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "reportedValue": { "raw": 7.499636, "fmt": "7.50" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualInventory"] },
+        "timestamp": [1601424000],
+        "annualInventory": [
+          {
+            "dataId": 23108,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 4061000000.0, "fmt": "4.06B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCurrentLiabilities"] },
+        "timestamp": [1601424000],
+        "annualCurrentLiabilities": [
+          {
+            "dataId": 23047,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 105392000000.0, "fmt": "105.39B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualNetPPE"] },
+        "timestamp": [1601424000],
+        "annualNetPPE": [
+          {
+            "dataId": 23139,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 36766000000.0, "fmt": "36.77B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTangibleBookValue"] },
+        "timestamp": [1601424000],
+        "annualTangibleBookValue": [
+          {
+            "dataId": 23383,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 65339000000.0, "fmt": "65.34B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualLeases"] },
+        "timestamp": [1601424000],
+        "annualLeases": [
+          {
+            "dataId": 23313,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 10283000000.0, "fmt": "10.28B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOperatingRevenue"] },
+        "timestamp": [1601424000],
+        "annualOperatingRevenue": [
+          {
+            "dataId": 20112,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 274515000000.0, "fmt": "274.51B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualInterestIncome"] },
+        "timestamp": [1601424000],
+        "annualInterestIncome": [
+          {
+            "dataId": 20177,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 3763000000.0, "fmt": "3.76B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualReconciledCostOfRevenue"]
+        },
+        "timestamp": [1601424000],
+        "annualReconciledCostOfRevenue": [
+          {
+            "dataId": 20314,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 169559000000.0, "fmt": "169.56B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualOtherNonCurrentLiabilities"]
+        },
+        "timestamp": [1601424000],
+        "annualOtherNonCurrentLiabilities": [
+          {
+            "dataId": 23379,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 26320000000.0, "fmt": "26.32B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualPbRatio"] },
+        "timestamp": [1601424000],
+        "annualPbRatio": [
+          {
+            "dataId": 14012,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "reportedValue": { "raw": 27.200118, "fmt": "27.20" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNetOtherInvestingChanges"]
+        },
+        "timestamp": [1601424000],
+        "annualNetOtherInvestingChanges": [
+          {
+            "dataId": 26165,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -791000000.0, "fmt": "-791.00M" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualOtherCurrentLiabilities"]
+        },
+        "timestamp": [1601424000],
+        "annualOtherCurrentLiabilities": [
+          {
+            "dataId": 23151,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 42684000000.0, "fmt": "42.68B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCurrentDebtAndCapitalLeaseObligation"]
+        },
+        "timestamp": [1601424000],
+        "annualCurrentDebtAndCapitalLeaseObligation": [
+          {
+            "dataId": 23046,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 13769000000.0, "fmt": "13.77B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualChangeInCashSupplementalAsReported"]
+        },
+        "timestamp": [1601424000],
+        "annualChangeInCashSupplementalAsReported": [
+          {
+            "dataId": 26305,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -10435000000.0, "fmt": "-10.44B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualRepaymentOfDebt"] },
+        "timestamp": [1601424000],
+        "annualRepaymentOfDebt": [
+          {
+            "dataId": 26183,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -12629000000.0, "fmt": "-12.63B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualPurchaseOfInvestment"] },
+        "timestamp": [1601424000],
+        "annualPurchaseOfInvestment": [
+          {
+            "dataId": 26110,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -115148000000.0, "fmt": "-115.15B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualGainsLossesNotAffectingRetainedEarnings"]
+        },
+        "timestamp": [1601424000],
+        "annualGainsLossesNotAffectingRetainedEarnings": [
+          {
+            "dataId": 23009,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -406000000.0, "fmt": "-406.00M" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualPayables"] },
+        "timestamp": [1601424000],
+        "annualPayables": [
+          {
+            "dataId": 23165,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 42296000000.0, "fmt": "42.30B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualAccountsPayable"] },
+        "timestamp": [1601424000],
+        "annualAccountsPayable": [
+          {
+            "dataId": 23000,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 42296000000.0, "fmt": "42.30B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCommercialPaper"] },
+        "timestamp": [1601424000],
+        "annualCommercialPaper": [
+          {
+            "dataId": 23279,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 4996000000.0, "fmt": "5.00B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualInvestingCashFlow"] },
+        "timestamp": [1601424000],
+        "annualInvestingCashFlow": [
+          {
+            "dataId": 26013,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -4289000000.0, "fmt": "-4.29B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualPretaxIncome"] },
+        "timestamp": [1601424000],
+        "annualPretaxIncome": [
+          {
+            "dataId": 20136,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 67091000000.0, "fmt": "67.09B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualEndCashPosition"] },
+        "timestamp": [1601424000],
+        "annualEndCashPosition": [
+          {
+            "dataId": 26016,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 39789000000.0, "fmt": "39.79B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCashFlowFromContinuingFinancingActivities"]
+        },
+        "timestamp": [1601424000],
+        "annualCashFlowFromContinuingFinancingActivities": [
+          {
+            "dataId": 26008,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -86820000000.0, "fmt": "-86.82B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualNetTangibleAssets"] },
+        "timestamp": [1601424000],
+        "annualNetTangibleAssets": [
+          {
+            "dataId": 23403,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 65339000000.0, "fmt": "65.34B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualForwardPeRatio"] },
+        "timestamp": [1601424000],
+        "annualForwardPeRatio": [
+          {
+            "dataId": 14020,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "reportedValue": { "raw": 30.1205, "fmt": "30.12" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOtherIncomeExpense"] },
+        "timestamp": [1601424000],
+        "annualOtherIncomeExpense": [
+          {
+            "dataId": 20117,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": -87000000.0, "fmt": "-87.00M" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOperatingIncome"] },
+        "timestamp": [1601424000],
+        "annualOperatingIncome": [
+          {
+            "dataId": 20109,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 66288000000.0, "fmt": "66.29B" }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNetIncomeFromContinuingAndDiscontinuedOperation"]
+        },
+        "timestamp": [1601424000],
+        "annualNetIncomeFromContinuingAndDiscontinuedOperation": [
+          {
+            "dataId": 20309,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 57411000000.0, "fmt": "57.41B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualGrossPPE"] },
+        "timestamp": [1601424000],
+        "annualGrossPPE": [
+          {
+            "dataId": 23100,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 103526000000.0, "fmt": "103.53B" }
+          }
+        ]
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualNetInterestIncome"] },
+        "timestamp": [1601424000],
+        "annualNetInterestIncome": [
+          {
+            "dataId": 20095,
+            "asOfDate": "2020-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": { "raw": 890000000.0, "fmt": "890.00M" }
+          }
+        ]
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualFinishedGoods"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualAverageDilutionEarnings"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualInvestmentProperties"] }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualTaxesReceivable"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualBasicDiscontinuousOperations"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualRentAndLandingFees"] } },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualSpecialIncomeCharges"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualContinuingAndDiscontinuedDilutedEPS"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualAllowanceForDoubtfulAccountsReceivable"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualOtherSpecialCharges"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualCurrentNotesPayable"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentPensionAndOtherPostretirementBenefitPlans"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNetIncomeDiscontinuousOperations"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualLongTermEquityInvestment"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCurrentDeferredTaxesAssets"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentDeferredAssets"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualEarningsFromEquityInterestNetOfTax"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualWriteOff"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualLineOfCredit"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualOtherInventories"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualOtherTaxes"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualAccruedInterestReceivable"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualSalariesAndWages"] } },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTreasurySharesNumber"] }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualAmortization"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDepreciationAmortizationDepletionIncomeStatement"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualGoodwill"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualTotalTaxPayable"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualLoansReceivable"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": [
+            "annualFinancialAssetsDesignatedasFairValueThroughProfitorLossTotal"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentAccountsReceivable"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualMinimumPensionLiabilities"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualGainOnSaleOfBusiness"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualImpairmentOfCapitalAssets"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualBuildingsAndImprovements"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualProvisionForDoubtfulAccounts"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualOtherEquityInterest"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualAmortizationOfIntangiblesIncomeStatement"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualGoodwillAndOtherIntangibleAssets"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTaxLossCarryforwardBasicEPS"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualBasicExtraordinary"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualMinorityInterests"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualTradingSecurities"] } },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualHedgingAssetsCurrent"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDepreciationIncomeStatement"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualGainOnSaleOfPPE"] } },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualSecuritiesAmortization"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualLongTermCapitalLeaseObligation"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOtherOperatingExpenses"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualLiabilitiesHeldforSaleNonCurrent"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDepletionIncomeStatement"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualConstructionInProgress"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualSellingAndMarketingExpense"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualOtherGandA"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentAccruedExpenses"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTotalPartnershipCapital"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualPensionandOtherPostRetirementBenefitPlansCurrent"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDilutedAccountingChange"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualForeignCurrencyTranslationAdjustments"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDuetoRelatedPartiesNonCurrent"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualGeneralPartnershipCapital"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTotalUnusualItemsExcludingGoodwill"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualOtherPayable"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDilutedEPSOtherGainsLosses"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualTaxLossCarryforwardDilutedEPS"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentPrepaidAssets"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCurrentCapitalLeaseObligation"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualReportedNormalizedBasicEPS"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualDividendPerShare"] } },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualTotalOtherFinanceCost"] }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualOtherProperties"] } },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualNormalizedDilutedEPS"] }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualLongTermProvisions"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualPrepaidAssets"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualBasicEPSOtherGainsLosses"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDerivativeProductLiabilities"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualLimitedPartnershipCapital"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualPreferredSharesNumber"] }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOtherIntangibleAssets"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentNoteReceivables"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualOtherEquityAdjustments"] }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualInsuranceAndClaims"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualReportedNormalizedDilutedEPS"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualExciseTaxes"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualTotalUnusualItems"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualGeneralAndAdministrativeExpense"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualHeldToMaturitySecurities"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualCurrentProvisions"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualOtherInvestments"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDuetoRelatedPartiesCurrent"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualFixedAssetsRevaluationReserve"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualDilutedExtraordinary"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualGrossAccountsReceivable"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentDeferredTaxesAssets"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualInvestmentsinAssociatesatCost"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualRawMaterials"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualFinancialAssets"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualEarningsFromEquityInterest"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualDividendsPayable"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDilutedDiscontinuousOperations"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNetIncomeFromTaxLossCarryforward"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualNetIncomeExtraordinary"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualInventoriesAdjustmentsAllowances"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDepreciationAndAmortizationInIncomeStatement"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualEmployeeBenefits"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualWorkInProcess"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCurrentDeferredTaxesLiabilities"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualContinuingAndDiscontinuedBasicEPS"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualInvestmentsinJointVenturesatCost"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualMinorityInterest"] } },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualGainOnSaleOfSecurity"] }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualInterestPayable"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDilutedContinuousOperations"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualReceivablesAdjustmentsAllowances"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualBasicAccountingChange"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualAdditionalPaidInCapital"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualInvestmentsinSubsidiariesatCost"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDuefromRelatedPartiesCurrent"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualBasicContinuousOperations"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualInvestmentsInOtherVenturesUnderEquityMethod"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualRentExpenseSupplemental"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentDeferredLiabilities"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualNotesReceivable"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualUnrealizedGainLoss"] } },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualIncomeTaxPayable"] } },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCurrentDeferredAssets"] }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualNormalizedBasicEPS"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualRestructuringAndMergernAcquisition"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentDeferredTaxesLiabilities"]
+        }
+      },
+      { "meta": { "symbol": ["AAPL"], "type": ["annualRestrictedCash"] } },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualDuefromRelatedPartiesNonCurrent"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualDefinedPensionBenefit"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualAssetsHeldForSaleCurrent"]
+        }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualNonCurrentDeferredRevenue"]
+        }
+      },
+      {
+        "meta": { "symbol": ["AAPL"], "type": ["annualCurrentAccruedExpenses"] }
+      },
+      {
+        "meta": {
+          "symbol": ["AAPL"],
+          "type": ["annualCapitalLeaseObligations"]
+        }
+      }
+    ],
+    "error": null
+  }
+}

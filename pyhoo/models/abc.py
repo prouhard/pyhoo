@@ -15,7 +15,7 @@ class BaseModel(metaclass=abc.ABCMeta):
         return f"{self.__class__.__name__}({formatted_attrs})"
 
 
-@dataclass(order=True, frozen=True)
+@dataclass(frozen=True)
 class OptionalFieldsModel(BaseModel):
     """For pure dataclasses without custom `__init__` method.
     Make all fields optional and default to `None`.

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import enum
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List, Optional
 
 from pyhoo.models.abc import BaseModel, OptionalFieldsModel
@@ -39,9 +39,9 @@ class Quote(OptionalFieldsModel):
 
 
 @dataclass(frozen=True)
-class AdjClose(OptionalFieldsModel):
+class AdjClose(BaseModel):
 
-    adjclose: List[float]
+    adjclose: List[float] = field(default_factory=list)
 
 
 class Indicators(BaseModel):
@@ -50,8 +50,8 @@ class Indicators(BaseModel):
     adjclose: AdjClose
 
     def __init__(self, indicators: IndicatorsDict) -> None:
-        self.quote = Quote(**indicators["quote"][0])
-        self.adjclose = AdjClose(**indicators["adjclose"][0])
+        self.quote = Quote(**indicators.get("quote", [{}])[0])
+        self.adjclose = AdjClose(**indicators.get("adjclose", [{}])[0])
 
 
 @dataclass(frozen=True)
@@ -118,6 +118,9 @@ class ChartMeta(BaseModel):
     dataGranularity: Interval
     range: Range
     validRanges: List[Range]
+    previousClose: Optional[float]
+    scale: Optional[int]
+    tradingPeriods: Optional[List[TradingPeriod]]
 
     def __init__(
         self,
@@ -135,8 +138,11 @@ class ChartMeta(BaseModel):
         priceHint: int,
         currentTradingPeriod: CurrentTradingPeriodDict,
         dataGranularity: str,
-        range: str,
+        range: Optional[str],
         validRanges: List[str],
+        previousClose: Optional[float] = None,
+        scale: Optional[int] = None,
+        tradingPeriods: Optional[List[List[TradingPeriodDict]]] = None,
     ) -> None:
         self.currency = currency
         self.symbol = symbol
@@ -154,6 +160,13 @@ class ChartMeta(BaseModel):
         self.dataGranularity = Interval(dataGranularity)
         self.range = Range(range)
         self.validRanges = [Range(valid_range) for valid_range in validRanges]
+        self.previousClose = previousClose
+        self.scale = scale
+        self.tradingPeriods = [
+            TradingPeriod(**trading_period)
+            for trading_period_sequence in tradingPeriods or [[]]
+            for trading_period in trading_period_sequence
+        ]
 
     def to_dict(self) -> ChartMetaDictBase:
         return {
@@ -168,7 +181,9 @@ class ChartMeta(BaseModel):
             "exchangeTimezoneName": self.exchangeTimezoneName,
             "regularMarketPrice": self.regularMarketPrice,
             "chartPreviousClose": self.chartPreviousClose,
+            "previousClose": self.previousClose,
             "priceHint": self.priceHint,
             "dataGranularity": self.dataGranularity.value,
-            "range": self.range.value,
+            "range": self.range.value or None,
+            "scale": self.scale,
         }

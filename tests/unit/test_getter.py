@@ -28,14 +28,15 @@ async def test_getter_run_chart() -> None:
     interval = Interval.ONE_DAY.value
     path = "v8/finance/chart"
     session = MockSession()
-    url = (
-        f"{GetTickerDataTask._BASE_URL}/{path}/{ticker}?"
-        f"period1={period1}&"
-        f"period2={period2}&"
-        f"interval={interval}"
-    )
+    url = f"{GetTickerDataTask._BASE_URL}/{path}/{ticker}"
 
-    session.add(url, "GET", mock_chart)
+    params = {
+        "period1": period1,
+        "period2": period2,
+        "interval": interval,
+    }
+
+    session.add(url, params, "GET", mock_chart)
 
     task = GetTickerDataTask(
         path=path,
@@ -57,10 +58,17 @@ async def test_getter_run_fundamentals() -> None:
     period2 = 1517356800
     type = "annualWorkInProcess,annualConstructionInProgress"
     path = "ws/fundamentals-timeseries/v1/finance/timeseries"
-    session = MockSession()
-    url = f"{GetTickerDataTask._BASE_URL}/{path}/{ticker}?period1={period1}&period2={period2}&type={type}"
 
-    session.add(url, "GET", mock_fundamentals)
+    session = MockSession()
+    url = f"{GetTickerDataTask._BASE_URL}/{path}/{ticker}"
+
+    params = {
+        "period1": period1,
+        "period2": period2,
+        "type": type,
+    }
+
+    session.add(url, params, "GET", mock_fundamentals)
 
     task = GetTickerDataTask(
         path=path,
@@ -82,7 +90,7 @@ async def test_getter_run_options() -> None:
     session = MockSession()
     url = f"{GetTickerDataTask._BASE_URL}/{path}/{ticker}"
 
-    session.add(url, "GET", mock_options)
+    session.add(url, {}, "GET", mock_options)
 
     task = GetTickerDataTask(path=path, ticker=ticker).run(session=cast(ClientSession, session))
 
