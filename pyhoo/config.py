@@ -55,8 +55,9 @@ class ParamConfig:
         if self.options:
             values = cast(Iterable[T], [value] if self.type != list else value)
             for _value in values:
-                if self._unprefix(cast(str, _value)) not in self.options:
-                    raise InvalidParameterValueError(self.name, _value, self.options)
+                unprefixed_value = self._unprefix(cast(str, _value))
+                if unprefixed_value not in self.options:
+                    raise InvalidParameterValueError(self.name, unprefixed_value, self.options)
 
     def format(self, value: T) -> Union[T, V]:
         if self.converter:
