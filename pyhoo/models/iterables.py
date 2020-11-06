@@ -33,9 +33,6 @@ class CustomIterable(BaseModel, Generic[T]):
     def __len__(self) -> int:
         return len(self._values)
 
-    def __add__(self, custom_iterable: CustomIterable[T]) -> CustomIterable[T]:
-        return self.__class__(self._values + custom_iterable._values)
-
 
 class CustomIterator(Generic[T]):
 

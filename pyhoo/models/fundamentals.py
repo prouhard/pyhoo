@@ -1,18 +1,8 @@
-import enum
 from dataclasses import dataclass
 from typing import Sequence, TypeVar
 
 from pyhoo.models.abc import BaseModel, OptionalFieldsModel
 from pyhoo.types.fundamentals import ReportedValueDict
-
-T = TypeVar("T")
-
-
-class Frequency(enum.Enum):
-
-    ANNUAL = "annual"
-    QUARTERLY = "quarterly"
-    MONTHLY = "monthly"
 
 
 @dataclass(frozen=True)
@@ -43,6 +33,9 @@ class FundamentalsRow(BaseModel):
         self.periodType = periodType
         self.reportedValue = ReportedValue(**reportedValue)
         self.currencyCode = currencyCode
+
+
+T = TypeVar("T")
 
 
 class FundamentalsMeta(BaseModel):
