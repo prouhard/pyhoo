@@ -11,6 +11,8 @@ _Yet another unofficial Yahoo Finance API library but with concurrent requests._
 
 1. [Installation](#installation)
 1. [Usage](#usage)
+   1. [Demo](#demo)
+   1. [Parameters](#parameters)
 1. [Troubleshooting](#troubleshooting)
 1. [Contributing](#contributing)
 
@@ -23,6 +25,8 @@ pip install pyhoo
 ```
 
 ## Usage
+
+### Demo
 
 Pyhoo is **simple**:
 
@@ -53,11 +57,36 @@ Pyhoo is **fast**, it uses concurrency to fire multiple requests at the same tim
 
 Pyhoo is **still in development**, feel free to add more endpoints thanks to the `Config` object !
 
+### Parameters
+
 Currently, it supports three endpoints:
 
 1. `chart`, for [OHLC](https://en.wikipedia.org/wiki/Open-high-low-close_chart) data, basically stock prices
 1. `fundamentals`, for financial data about the firm, see the [list of available reports](pyhoo/data/fundamentals_type_options.txt)
 1. `options`, for detailed information on each call and put at each strike on specific tickers
+
+For each endpoint, you must specify a ticker or a list of tickers. Every ticker displayed in Yahoo Finance is valid.
+
+The available parameters for the `chart` enpoint are :
+
+- `start` [str] (required): date ('%Y-%m-%d') from which to get the stock prices
+- `end` [str] (required): maximum date ('%Y-%m-%d') for the stock prices
+- `granularity` [str] (optional, defaults to `'1d`'): data granularity, must be one of `['1m', '2m', '5m', '15m', '30m', '1h', '1d', '5d', '1w', '1mo', '3mo']` (ex: `'1m'` gives minute by minute data)
+
+The available parameters for the `fundamentals` enpoint are :
+
+- `start` [str] (required): date ('%Y-%m-%d') from which to get the reports
+- `end` [str] (required): maximum date ('%Y-%m-%d') for the reports
+- `type` [list[str]] (defaults to all types): name of the financial report to get, see the [list of available reports](pyhoo/data/fundamentals_type_options.txt) for the full list. Each name must be prefixed with the specific frequency (`annual`, `monthly`, `quarterly`). Ex: to get annual diluted EPS and querterly gros profit -> [`annualDilutedEPS`, `quarterlyGrossProfit`].
+
+The available parameters for the `options` enpoint are :
+
+- `start` [str] (optional): date ('%Y-%m-%d') of the option emission
+- `end` [str] (optional): date ('%Y-%m-%d') of the option expiration
+- `strikeMax` [float] (optional): filter options with strike price above `strikeMax`
+- `strikeMin` [float] (optional): filter options with strike price below `strikeMin`
+
+By default, it retrieves every current option, regarding of its strike or expiration date.
 
 ## Troubleshooting
 
