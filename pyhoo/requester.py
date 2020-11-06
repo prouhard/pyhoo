@@ -39,8 +39,8 @@ class Requester:
                         **self._params,
                     ).run(session=session)
                 )
-            batch_tickers_data = cast(
+            responses = cast(
                 List[Dict[str, ApiResponse]],
                 await asyncio.gather(*tasks, return_exceptions=False),
             )
-            return batch_tickers_data
+            return responses
